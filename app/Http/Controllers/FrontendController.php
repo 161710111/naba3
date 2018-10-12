@@ -11,6 +11,7 @@ use App\Haji;
 use App\Kategoria;
 use App\Wisata;
 use App\Kategoriw;
+use App\Daftar;
 
 class FrontendController extends Controller
 {
@@ -105,6 +106,11 @@ class FrontendController extends Controller
         return view('frontend.menu_wisata',compact('menu_wisata'));
     }
 
+    public function index22()
+    {
+        return view('frontend.sukses',compact('sukses'));
+    }
+
     public function home()
     {
         $berita = Berita::all();
@@ -147,5 +153,66 @@ class FrontendController extends Controller
         return view('frontend.detail_wisata',compact('wisata'));
     }
 
-    
+    public function create()
+    {
+        return view('frontend.daftar_umroh');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $this->validate($request,[
+            
+            'paket' => 'required|',
+            'paspor' => 'required|',
+            'nama' => 'required|',
+            'tempatlahir' => 'required|',
+            'tgllahir' => 'required|',
+            'jk' => 'required|',
+            'alamat' => 'required|',
+            'notelp' => 'required|',
+            'status' => 'required|',
+            'pekerjaan' => 'required|',
+            'jabatan' => 'required|',
+            'almkantor' => 'required|',
+            'notelpkantor' => 'required|',
+            'email' => 'required|',
+            'keterangan' => 'required|'
+              
+        ]);
+        $daftars = new Daftar;
+        $daftars->foto = $request->foto;
+        $daftars->paket = $request->paket;
+        $daftars->paspor = $request->paspor;
+        $daftars->nama = $request->nama;
+        $daftars->tempatlahir = $request->tempatlahir;
+        $daftars->tgllahir = $request->tgllahir;
+        $daftars->jk = $request->jk;
+        $daftars->alamat = $request->alamat;
+        $daftars->notelp = $request->notelp;
+        $daftars->status = $request->status;
+        $daftars->pekerjaan = $request->pekerjaan;
+        $daftars->jabatan = $request->jabatan;
+        $daftars->almkantor = $request->almkantor;
+        $daftars->notelpkantor = $request->notelpkantor;
+        $daftars->email = $request->email;
+        $daftars->keterangan = $request->keterangan;
+
+        //apload foto
+        if ($request->hasFile('foto')){
+            $file=$request->file('foto');
+            $destinationPath=public_path().'/assets/admin/images/icon/';
+            $filename=str_random(6).'_'.$file->getClientOriginalName();
+            $uploadSucces= $file->move($destinationPath,$filename);
+            $daftars->foto= $filename;
+        }
+
+        $daftars->save();
+        return redirect()->route('sukses.index');
+    }
 }

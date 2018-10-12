@@ -10,7 +10,7 @@
     	<div class="title mb-50">
                 <h2>Form Pendaftaran </h2>
               </div>
-	 <form action="{{ route('frontend.store') }}" method="post" enctype="multipart/form-data" >
+	 <form action="{{ route('daftar_umroh.store') }}" method="post" enctype="multipart/form-data" >
 			  		{{ csrf_field() }}
 
 			  		<div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">

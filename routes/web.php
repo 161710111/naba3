@@ -23,7 +23,11 @@ Route::get('wisata', 'FrontendController@index4')->name('wisata');
 Route::get('detailwisata/{wisata}', 'FrontendController@nampil')->name('detailwisata');
 Route::get('testimoni', 'FrontendController@index5')->name('testimoni');
 Route::get('galeri', 'FrontendController@index6')->name('galeri');
-Route::get('daftar_umroh', 'FrontendController@index7')->name('daftar_umroh');
+Route::get('sukses', 'FrontendController@index22')->name('sukses.index');
+
+Route::get('daftar_umroh/create', 'FrontendController@index7')->name('daftar_umroh');
+Route::post('daftar_umroh', 'FrontendController@store')->name('daftar_umroh.store');
+
 Route::get('berita', 'FrontendController@berita')->name('berita');
 Route::get('detailberita/{berita}', 'FrontendController@show')->name('detailberita');
 Route::get('faqs', 'FrontendController@index9')->name('faqs');
@@ -51,8 +55,8 @@ Route::group(['prefix'=>'admin', 'middleware'=>['auth','role:admin']],function()
 	Route::resource('tabungan','TabunganController');
 	Route::resource('umroh','UmrohController');
 	Route::resource('kategorie','KategorieController');
-	Route::resource('umplus','UmplusController');
-	Route::resource('umpbyreq','UmpbyreqController');
+	// Route::resource('umplus','UmplusController');
+	// Route::resource('umpbyreq','UmpbyreqController');
 	Route::resource('kontak','KontakController');
 	Route::resource('daftar','DaftarController');
 	Route::resource('kategori','KategoriController');

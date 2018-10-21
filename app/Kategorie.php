@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kategorie extends Model
 {
-    protected $fillable = ['nama_kategori','keterangan','slug'];
+    protected $fillable = ['nama_kategori','slug'];
     public $timestamps = true;
 
     public function Umroh()

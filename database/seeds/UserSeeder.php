@@ -19,26 +19,13 @@ class UserSeeder extends Seeder
         $adminRole->display_name = "admin";
         $adminRole->save();
 
-        //membuat role member
-        $memberRole = new Role();
-        $memberRole->name = "member";
-        $memberRole->display_name = "member";
-        $memberRole->save();
-
         //membuat sample admin
         $admin = new user();
         $admin->name = "admin";
-        $admin->email = "admin@gmail.com";
-        $admin->password =bcrypt('rahasia');
+        $admin->email = "nabatour@gmail.com";
+        $admin->password =bcrypt('nabatour');
         $admin->save();
         $admin->attachRole($adminRole);
 
-        //membuat sample member
-        $member = new user();
-        $member->name ="sample member";
-        $member->email ="member@gmail.com";
-        $member->password =bcrypt('rahasia');
-        $member->save();
-        $member->attachRole($memberRole);
     }
 }

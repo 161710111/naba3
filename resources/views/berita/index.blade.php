@@ -7,10 +7,14 @@
     <div class="container">
         <div class="col-md-12">
             <div class="panel panel-primary">
-              <div class="panel-heading">Berita
-                <div class="panel-title pull-right"><a class="btn btn-warning" href="{{ route('berita.create') }}">Tambah</a>
-                </div>
+              <center><h1><i style="font-size:25px;color:purple"> B E R I T A </i></h1></center>
+              <div class="panel-heading">
+                <div class="panel-title pull-right"><a href="{{ route('berita.create') }}"><i class="fa fa-plus"></i>Tambah</a>
+        </div>
               </div>
+
+              <br>
+              <br>
 
               <div class="panel-body">
                 <div class="table-responsive">
@@ -31,7 +35,7 @@
                         @foreach($beritas as $data)
                       <tr>
                         <td>{{ $no++ }}</td>
-                        <td><img src="{{ asset('assets/admin/images/icon/'.$data->foto )}}" style="max-height:60px; max-width: 60px; margin-top: 6px;"></td>
+                        <td><img src="{{ asset('assets/admin/images/icon/'.$data->foto )}}" style="max-height:100px; max-width: 150px; margin-top: 6px;"></td>
                         <td>{{ $data->judul }}</td>
                         <td>{!!$data->isi!!}</td>
                         <td>{{ $data->Kategori->nama_kategori }}</td>

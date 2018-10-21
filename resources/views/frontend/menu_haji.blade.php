@@ -115,29 +115,29 @@
 		          </ul>
       </div>
     </section>
-    @php
+   							 @php
 							$hajis = App\Haji::all();
 							@endphp
 			<section>
 						@foreach($hajis as $data)	
 	<div class="title center">
 		<h2 style="color:#702c8d;">
-			{{ $data->judul}}</h2>
+			{{ $data->judul }}</h2>
 	</div>
 	
 	<div class="container">
-		<p>{{ $data->isi }}</p>
+		<p>{!!$data->isi!!}</p>
 	</div>
 	@endforeach
 </section>
 	
-			<p style="text-align:center; font-size:15pt;"><a href="index/detail_haji/2.html"><b>&nbsp;Detail</b></a></p>
+			
 					</div>
 	</section>
 		
 	<section>
 		<div class="container text-right">    
-			<a class="btn btn-primary" href="index/daftar_haji.html">Daftar sekarang</a>
+			<a class="btn btn-primary" href="{{ route('daftar_umroh') }}">Daftar sekarang</a>
         </div>
     </section>
      @endsection

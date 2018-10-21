@@ -26,8 +26,7 @@
         </div>
         
 		<br>
-			<a class="small-link black-text" href="galeri_manasik_umrah.html"><p style="text-align:center;">Lihat Semua Foto <i class="hc-arrow-right"></i></p></a>
-      </div>
+
     </section>
 
     <section class="white-bg">
@@ -53,10 +52,50 @@
         </div>
         
     <br>
-      <a class="small-link black-text" href="galeri_manasik_umrah.html"><p style="text-align:center;">Lihat Semua Foto <i class="hc-arrow-right"></i></p></a>
-      </div>
+
     </section>
 	
+<section class="white-bg">
+      <div class="container">
+
+        <div class="title center">
+          <h2>Galeri Video</h2>
+          <br>
+        </div>
+
+          <div class="row">
+          <div class="owl-carousel" data-options="{&quot;items&quot;: 3, &quot;margin&quot;: 50, &quot;autoplay&quot;: true, &quot;dots&quot;: true}"> 
+                    @foreach($yt as $data)
+                <div class="card-post">
+                      <div>
+                <div class="fbq-item js-item-html fbq-html">
+                  <div class="srizon-yt-container" id="srizonytscroller1">
+                      <div class="yt-fp-outer outerwidthlarge4 outerwidthsmall2 rounding7">
+                        <div class="yt-fp-padding padding5">
+                          <div class="imgbox fpthumb shadownone" >
+                        <a class="magpopif" href="https://www.youtube.com/watch?v={{$data->url}}">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{$data->url}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </a>
+                            <center>
+                            <div>{{$data->title}}</div>
+                            </center>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                       @endforeach  
+                      </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
 
 <section class="white-bg">
     @php
@@ -73,7 +112,7 @@
             @foreach($galumregulers as $data)
             <div class="card-post">
               <div>
-                  <img src="{{ asset('assets/admin/images/icon/'.$data->logo )}}" style="max-height:180px; max-width: 90px; margin-top: 6px;">
+                  <img src="{{ asset('assets/admin/images/icon/'.$data->logo )}}" style="max-height:300px; max-width: 300px; margin-top: 6px;">
               </div>
             </div>
             @endforeach
@@ -81,11 +120,13 @@
         </div>
         
     <br>
-      <a class="small-link black-text" href="galeri_manasik_umrah.html"><p style="text-align:center;">Lihat Semua Foto <i class="hc-arrow-right"></i></p></a>
-      </div>
+
     </section>    
 
 	<section class="white-bg">
+    @php
+    $galumplus = App\galumplus::all();
+    @endphp
       <div class="container">
         <div class="title center">
           <h2>Galeri Umrah Plus</h2>
@@ -93,16 +134,17 @@
         </div>
         <div class="row">
           <div class="owl-carousel" data-options="{&quot;items&quot;: 3, &quot;margin&quot;: 50, &quot;autoplay&quot;: true, &quot;dots&quot;: true}"> 
+            @foreach($galumplus as $data)
 						<div class="card-post">
               <div>
-                  <img src="{{asset('assets/user/dataimage/gallery/61.jpg')}}" alt="Galeri Umrah Plus Nabatour" title="Galeri Umrah Plus Nabatour">
+                  <img src="{{ asset('assets/admin/images/icon/'.$data->logo )}}" style="max-height:300px; max-width: 300px; margin-top: 6px;">
               </div>
             </div>
+            @endforeach
 			          </div>
         </div>
 		<br>
-			<a class="small-link black-text" href="galeri_umrah_plus.html"><p style="text-align:center;">Lihat Semua Foto <i class="hc-arrow-right"></i></p></a>
-      </div>
+
     </section>
 	
 	<section class="white-bg">
@@ -128,8 +170,7 @@
         </div>
         
     <br>
-      <a class="small-link black-text" href="galeri_manasik_umrah.html"><p style="text-align:center;">Lihat Semua Foto <i class="hc-arrow-right"></i></p></a>
-      </div>
+
     </section>
 	
 	<section class="white-bg">
@@ -155,7 +196,6 @@
         </div>
         
     <br>
-      <a class="small-link black-text" href="galeri_manasik_umrah.html"><p style="text-align:center;">Lihat Semua Foto <i class="hc-arrow-right"></i></p></a>
-      </div>
+
     </section>
     @endsection

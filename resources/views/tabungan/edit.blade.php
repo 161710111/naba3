@@ -1,10 +1,35 @@
 @extends('layouts.admin')
 @section('content')
+<br>
+<br>
+<br>
+
+<script src="{{ asset('assets/tinymce/js/tinymce/tinymce.js') }}"></script>
+<script type="text/javascript">
+    tinymce.init({
+  selector: 'textarea',
+  height: 300,
+  theme: 'modern',
+  plugins: 'print preview fullpage  searchreplace autolink directionality  visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount   imagetools  contextmenu colorpicker textpattern help',
+  toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+  image_advtab: true,
+  templates: [
+    { title: 'Test template 1', content: 'Test 1' },
+    { title: 'Test template 2', content: 'Test 2' }
+  ],
+  content_css: [
+    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+    '//www.tinymce.com/css/codepen.min.css'
+  ]
+ });
+
+</script>
+
 <div class="row">
 	<div class="container">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
-			  <div class="panel-heading">Edit Testimoni
+			  <div class="panel-heading">Edit Tabungan
 			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
@@ -26,7 +51,7 @@
 
 			  		<div class="form-group {{ $errors->has('keterangan') ? ' has-error' : '' }}">
 			  			<label class="control-label">Keterangan</label>	
-			  			<input type="text" value="{{ $tabungans->keterangan }}" name="keterangan" class="form-control"  required>
+			  			<textarea  name="keterangan" value="{{ $tabungans->keterangan }}" class="form-control" required></textarea>
 			  			@if ($errors->has('keterangan'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('keterangan') }}</strong>
@@ -36,7 +61,7 @@
 
 			  		<div class="form-group {{ $errors->has('keunggulan') ? ' has-error' : '' }}">
 			  			<label class="control-label">keunggulan</label>	
-			  			<input type="text" value="{{ $tabungans->keunggulan }}" name="keunggulan" class="form-control"  required>
+			  			<textarea  name="keunggulan" value="{{ $tabungans->keunggulan }}" class="form-control" required></textarea>
 			  			@if ($errors->has('keunggulan'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('keunggulan') }}</strong>
@@ -46,7 +71,7 @@
 
 			  		<div class="form-group {{ $errors->has('syarat') ? ' has-error' : '' }}">
 			  			<label class="control-label">syarat</label>	
-			  			<input type="text" value="{{ $tabungans->syarat }}" name="syarat" class="form-control"  required>
+			  			<textarea  name="syarat" value="{{ $tabungans->syarat }}" class="form-control" required></textarea>
 			  			@if ($errors->has('syarat'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('syarat') }}</strong>
@@ -67,7 +92,7 @@
 
 			  		<div class="form-group {{ $errors->has('note') ? ' has-error' : '' }}">
 			  			<label class="control-label">note</label>	
-			  			<input type="text" value="{{ $tabungans->note }}" name="note" class="form-control"  required>
+			  			<textarea  name="note" value="{{ $tabungans->note }}" class="form-control" required></textarea>
 			  			@if ($errors->has('note'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('note') }}</strong>

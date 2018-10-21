@@ -7,10 +7,14 @@
     <div class="container">
         <div class="col-md-12">
             <div class="panel panel-primary">
-              <div class="panel-heading">Kategori
-                <div class="panel-title pull-right"><a class="btn btn-warning" href="{{ route('kategoriw.create') }}">Tambah</a>
-                </div>
+              <center><h1><i style="font-size:25px;color:purple"> K A T E G O R I  W I S A T A </i></h1></center>
+              <div class="panel-heading">
+                <div class="panel-title pull-right"><a href="{{ route('kategoriw.create') }}"><i class="fa fa-plus"></i>Tambah</a>
+        </div>
               </div>
+
+              <br>
+              <br>
 
               <div class="panel-body">
                 <div class="table-responsive">

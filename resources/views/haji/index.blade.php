@@ -7,10 +7,14 @@
     <div class="container">
         <div class="col-md-12">
             <div class="panel panel-primary">
-              <div class="panel-heading">Haji Reguler
-                <div class="panel-title pull-right"><a class="btn btn-warning" href="{{ route('haji.create') }}">Tambah</a>
-                </div>
+              <center><h1><i style="font-size:25px;color:purple"> H A J I </i></h1></center>
+              <div class="panel-heading">
+                <div class="panel-title pull-right"><a href="{{ route('haji.create') }}"><i class="fa fa-plus"></i>Tambah</a>
+        </div>
               </div>
+
+              <br>
+              <br>
 
               <div class="panel-body">
                 <div class="table-responsive">
@@ -37,14 +41,14 @@
                       <tr>
                         <td>{{ $no++ }}</td>
                         <td>{{ $data->judul }}</td>
-                        <td>{{ $data->isi }}</td>
-                        <td>{{ $data->harga }}</td>
-                        <td>{{ $data->fasilitas }}</td>
-                        <td>{{ $data->batal }}</td>
-                        <td>{{ $data->biayamasuk }}</td>
-                        <td>{{ $data->biayatidak }}</td>
-                        <td>{{ $data->syarat }}</td>
-                        <td>{{ $data->daftar }}</td>
+                        <td>{!! $data->isi!!}</td>
+                        <td>{!!$data->harga!!}</td>
+                        <td>{!!$data->fasilitas!!}</td>
+                        <td>{!!$data->batal!!}</td>
+                        <td>{!!$data->biayamasuk!!}</td>
+                        <td>{!!$data->biayatidak!!}</td>
+                        <td>{!!$data->syarat!!}</td>
+                        <td>{!!$data->daftar!!}</td>
                         <td>{{ $data->Kategoria->nama_kategori }}</td>
                             <td><a class="btn btn-warning" href="{{ route('haji.edit',$data->id) }}">Edit</a>
                         </td>

@@ -33,55 +33,7 @@
                         @endif
 			  		</div>
 
-			  		<div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">
-			  			<label class="control-label">foto</label>
-			  			<input type="file" name="foto" class="form-control" value="{{ $galeriwisatas->foto }}"  required>
-			  			@if ($errors->has('foto'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('foto') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
-
-			  		<div class="form-group {{ $errors->has('lokasi') ? ' has-error' : '' }}">
-			  			<label class="control-label">lokasi</label>	
-			  			<input type="text" value="{{ $wisatas->lokasi }}" name="nama" class="form-control"  required>
-			  			@if ($errors->has('lokasi'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('lokasi') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
-
-			  		<div class="form-group {{ $errors->has('harga') ? ' has-error' : '' }}">
-			  			<label class="control-label">harga</label>	
-			  			<input type="text" value="{{ $wisatas->harga }}" name="nama" class="form-control"  required>
-			  			@if ($errors->has('harga'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('harga') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
-
-			  		<div class="form-group {{ $errors->has('hotel') ? ' has-error' : '' }}">
-			  			<label class="control-label">hotel</label>	
-			  			<input type="text" value="{{ $wisatas->hotel }}" name="nama" class="form-control"  required>
-			  			@if ($errors->has('hotel'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('hotel') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
-
-			  		<div class="form-group {{ $errors->has('keterangan') ? ' has-error' : '' }}">
-			  			<label class="control-label">keterangan</label>	
-			  			<input type="text" value="{{ $wisatas->keterangan }}" name="nama" class="form-control"  required>
-			  			@if ($errors->has('keterangan'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('keterangan') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
+			  		
 
 			  		<div class="form-group {{ $errors->has('kategoriw_id') ? ' has-error' : '' }}">
 			  			<label class="control-label">Kategori</label>	

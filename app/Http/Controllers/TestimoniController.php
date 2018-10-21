@@ -91,12 +91,10 @@ class TestimoniController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'logo' => 'required|',
             'keterangan' => 'required|',
             'nama' => 'required|'
         ]);
         $testimonis = testimoni::findOrFail($id);
-        $testimonis->logo = $request->logo;
         $testimonis->keterangan = $request->keterangan;
         $testimonis->nama = $request->nama;
         

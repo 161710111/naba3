@@ -17,11 +17,6 @@ class CreateWisatasTable extends Migration
             $table->increments('id');
             $table->string('judul');
             $table->text('isi');
-            $table->string('foto');
-            $table->string('lokasi');
-            $table->string('harga');
-            $table->string('hotel');
-            $table->text('keterangan');
             $table->string('slug');
             $table->integer('kategoriw_id');
             $table->timestamps();

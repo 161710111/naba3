@@ -11,18 +11,20 @@
 				<h2 style="color:#702c8d;">FAQs</h2>
 				<br>
 			</div>
-			@foreach($faqs as $data)
+			
             <ul class="accordion nav" data-open-first="true">
+              @foreach($faqs as $data)
 			              <li>
                 <div class="accordion-title">
                   <h4>{{ $data->pertanyaan }}</h4>
                 </div>
                 <div class="accordion-content">
-                    <p>{{ $data->jawaban }}</p>
+                    <p>{!!$data->jawaban!!}</p>
 				</div>
-              </li>               
+              </li>  
+              @endforeach             
 		</ul>
-		@endforeach
+		
 			</div>
         </div>
       </div>

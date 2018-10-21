@@ -101,13 +101,12 @@
 					<h2 style="color:#702c8d;">
 					<span style="font-size:32px;">{{$data->judul}}</span></h2>
 				</div>
-				<p>{{ $data->isi}}</p>
+				<p>{!!$data->isi!!}</p>
         
 		  </div>  
-				
 
-
-            <div class="grid-post">
+@foreach($lokasi as $data)
+      <div class="grid-post">
               
               <article>
                 
@@ -118,7 +117,7 @@
                   <div class="grid-post-content">
                     <div class="centrize">
                       <div class="v-center">
-                        <h4>{{ $data->lokasi }}</h4>
+                        <h4>{{ $data->nama }}</h4>
             <h4>{{ $data->harga }}</h4>
             <p class="grid-post-info"><span class="grid-post-author"><b>{{ $data->hotel }}</b></span>
                         </p>
@@ -130,6 +129,11 @@
               </article>
               
             </div>
+            @endforeach
+				
+
+
+            
 			
           </div>
         </div>

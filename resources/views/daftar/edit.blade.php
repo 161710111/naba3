@@ -21,7 +21,7 @@
 
         			<div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">
 			  			<label class="control-label">foto</label>
-			  			<input type="file" name="foto" class="form-control" value="{{ $testimonis->foto }}"  required>
+			  			<input type="file" name="foto" class="form-control" value="{{ $daftars->foto }}"  required>
 			  			@if ($errors->has('foto'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('foto') }}</strong>

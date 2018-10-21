@@ -1,4 +1,4 @@
-@extends('layouts.frontend')
+extends('layouts.frontend')
 @section('content')
 
 	<!--POPUP-->
@@ -8,13 +8,13 @@
 	<br>
     <section class="p-0">
     	<div class="title mb-50">
-                <h2>Form Pendaftaran </h2>
+                <h2>Form Pendaftaran Umroh </h2>
               </div>
 	 <form action="{{ route('daftar_umroh.store') }}" method="post" enctype="multipart/form-data" >
 			  		{{ csrf_field() }}
 
 			  		<div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">
-			  			<label class="control-label">foto</label>	
+			  			<label class="control-label"><b>foto</b></label>	
 			  			<input type="file" id="foto" name="foto" class="validate" accept="image/*" required>
 			  			@if ($errors->has('foto'))
                             <span class="help-block">
@@ -24,7 +24,7 @@
 					</div>
 
 			  		<div class="form-group {{ $errors->has('paket') ? ' has-error' : '' }}">
-			  			<label class="control-label">paket</label>	
+			  			<label class="control-label"><b>Paket :</b></label>	
 			  			<input type="text" name="paket" class="form-control"  required>
 			  			@if ($errors->has('paket'))
                             <span class="help-block">
@@ -34,7 +34,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('paspor') ? ' has-error' : '' }}">
-			  			<label class="control-label">paspor</label>	
+			  			<label class="control-label"><b> No Paspor :</b></label>	
 			  			<input type="text" name="paspor" class="form-control"  required>
 			  			@if ($errors->has('paspor'))
                             <span class="help-block">
@@ -44,7 +44,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('nama') ? ' has-error' : '' }}">
-			  			<label class="control-label">nama</label>	
+			  			<label class="control-label"><b> Nama Lengkap :</b></label>	
 			  			<input type="text" name="nama" class="form-control"  required>
 			  			@if ($errors->has('nama'))
                             <span class="help-block">
@@ -54,7 +54,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('tempatlahir') ? ' has-error' : '' }}">
-			  			<label class="control-label">tempatlahir</label>	
+			  			<label class="control-label"><b> Tempat Lahir :</b></label>	
 			  			<input type="text" name="tempatlahir" class="form-control"  required>
 			  			@if ($errors->has('tempatlahir'))
                             <span class="help-block">
@@ -64,7 +64,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('tgllahir') ? ' has-error' : '' }}">
-			  			<label class="control-label">tgllahir</label>	
+			  			<label class="control-label"><b> Tanggal Lahir :</b></label>	
 			  			<input type="date" name="tgllahir" class="form-control"  required>
 			  			@if ($errors->has('tgllahir'))
                             <span class="help-block">
@@ -74,7 +74,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('jk') ? ' has-error' : '' }}">
-			  			<label class="control-label">jk</label>	
+			  			<label class="control-label"><b> Jenis Kelamin :</b></label>	
 			  			<input type="text" name="jk" class="form-control"  required>
 			  			@if ($errors->has('jk'))
                             <span class="help-block">
@@ -84,7 +84,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('alamat') ? ' has-error' : '' }}">
-			  			<label class="control-label">alamat</label>	
+			  			<label class="control-label"><b>Alamat :</b></label>	
 			  			<input type="text" name="alamat" class="form-control"  required>
 			  			@if ($errors->has('alamat'))
                             <span class="help-block">
@@ -94,7 +94,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('notelp') ? ' has-error' : '' }}">
-			  			<label class="control-label">notelp</label>	
+			  			<label class="control-label"></label><b> Telepon/Hp :</b></label>	
 			  			<input type="text" name="notelp" class="form-control"  required>
 			  			@if ($errors->has('notelp'))
                             <span class="help-block">
@@ -104,7 +104,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('status') ? ' has-error' : '' }}">
-			  			<label class="control-label">status</label>	
+			  			<label class="control-label"><b>Status Perkawinan :</b></label>	
 			  			<input type="text" name="status" class="form-control"  required>
 			  			@if ($errors->has('status'))
                             <span class="help-block">
@@ -114,7 +114,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('pekerjaan') ? ' has-error' : '' }}">
-			  			<label class="control-label">pekerjaan</label>	
+			  			<label class="control-label"><b>Pekerjaan :</b></label>	
 			  			<input type="text" name="pekerjaan" class="form-control"  required>
 			  			@if ($errors->has('pekerjaan'))
                             <span class="help-block">
@@ -124,7 +124,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('jabatan') ? ' has-error' : '' }}">
-			  			<label class="control-label">jabatan</label>	
+			  			<label class="control-label"><b>Jabatan :</b></label>	
 			  			<input type="text" name="jabatan" class="form-control"  required>
 			  			@if ($errors->has('jabatan'))
                             <span class="help-block">
@@ -134,7 +134,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('almkantor') ? ' has-error' : '' }}">
-			  			<label class="control-label">almkantor</label>	
+			  			<label class="control-label"><b>Alamat Kantor :</b></label>	
 			  			<input type="text" name="almkantor" class="form-control"  required>
 			  			@if ($errors->has('almkantor'))
                             <span class="help-block">
@@ -144,7 +144,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('notelpkantor') ? ' has-error' : '' }}">
-			  			<label class="control-label">notelpkantor</label>	
+			  			<label class="control-label"><b>No Telp Kantor :</b></label>	
 			  			<input type="text" name="notelpkantor" class="form-control"  required>
 			  			@if ($errors->has('notelpkantor'))
                             <span class="help-block">
@@ -154,7 +154,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-			  			<label class="control-label">email</label>	
+			  			<label class="control-label"><b>Email :</b></label>	
 			  			<input type="text" name="email" class="form-control"  required>
 			  			@if ($errors->has('email'))
                             <span class="help-block">
@@ -164,7 +164,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('keterangan') ? ' has-error' : '' }}">
-			  			<label class="control-label">keterangan</label>	
+			  			<label class="control-label"><b> Keterangan :</b> </label>	
 			  			<input type="text" name="keterangan" class="form-control"  required>
 			  			@if ($errors->has('keterangan'))
                             <span class="help-block">
@@ -172,7 +172,6 @@
                             </span>
                         @endif
 			  		</div>
-
 
 			  		<div class="form-group">
 			  			<button type="submit" class="btn btn-primary">Tambah</button>

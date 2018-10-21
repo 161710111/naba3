@@ -42,32 +42,13 @@ class WisataController extends Controller
         $this->validate($request,[
             'judul' => 'required|',
             'isi' => 'required|',
-            'foto' => 'required|',
-            'lokasi' => 'required|',
-            'harga' => 'required|',
-            'hotel' => 'required|',
-            'keterangan' => 'required|',
             'kategoriw_id' => 'required|'   
         ]);
         $wisatas = new Wisata;
         $wisatas->judul = $request->judul;
         $wisatas->isi = $request->isi;
-        $wisatas->foto = $request->foto;
-        $wisatas->lokasi = $request->lokasi;
-        $wisatas->harga = $request->harga;
-        $wisatas->hotel = $request->hotel;
-        $wisatas->keterangan = $request->keterangan;
         $wisatas->kategoriw_id = $request->kategoriw_id;
         $wisatas->slug = str_slug($request->judul,'-');
-
-        //apload foto
-        if ($request->hasFile('foto')){
-            $file=$request->file('foto');
-            $destinationPath=public_path().'/assets/admin/images/icon/';
-            $filename=str_random(6).'_'.$file->getClientOriginalName();
-            $uploadSucces= $file->move($destinationPath,$filename);
-            $wisatas->foto= $filename;
-        }
 
         $wisatas->save();
         return redirect()->route('wisata.index');
@@ -110,33 +91,13 @@ class WisataController extends Controller
         $this->validate($request,[
             'judul' => 'required|',
             'isi' => 'required|',
-            'foto' => 'required|',
-            'lokasi' => 'required|',
-            'hotel' => 'required|',
-            'harga' => 'required|',
-            'keterangan' => 'required|',
             'kategorie_id' => 'required'
         ]);
         $wisatas = Wisata::findOrFail($id);
         $wisatas->judul = $request->judul;
         $wisatas->isi = $request->isi;
-        $wisatas->foto = $request->foto;
-        $wisatas->lokasi = $request->lokasi;
-        $wisatas->harga = $request->harga;
-        $wisatas->hotel = $request->hotel;
-        $wisatas->keterangan = $request->keterangan;
         $wisatas->kategoriw_id = $request->kategoriw_id;
         $wisatas->slug = str_slug($request->judul,'-');
-
-        if ($request->hasFile('foto')) {
-            $uploaded_logo = $request->file('foto');
-            $extension = $uploaded_logo->getClientOriginalExtension();
-            $filename = md5(time()) . '.' . $extension;
-            $destinationPath = public_path() . DIRECTORY_SEPARATOR . '/assets/admin/images/icon/';
-            $uploaded_logo->move($destinationPath, $filename);
-    
-     $wisatas->foto=$filename;
-    }
 
         $wisatas->save();
         return redirect()->route('wisata.index');

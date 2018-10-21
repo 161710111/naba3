@@ -35,14 +35,48 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quattrocento:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Tangerine:400" rel="stylesheet" type="text/css">
-	
-    
+	    
+
+<link rel="icon" type="image/png" href="{{asset('assets/coza/images/icons/favicon.pn')}}"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/fonts/iconic/css/material-design-iconic-font.min.css')}}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/fonts/linearicons-v1.0.0/icon-font.min.css')}}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/vendor/animate/animate.css')}}">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/vendor/animsition/css/animsition.min.css')}}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/vendor/daterangepicker/daterangepicker.css')}}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/vendor/slick/slick.cssepicker.css')}}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/vendor/MagnificPopup/magnific-popup.css')}}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/vendor/perfect-scrollbar/perfect-scrollbar.css')}}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/css/util.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/coza/css/main.css')}}">
+
+
+
+      
+
 	<!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 	
 	<script src="{{asset('assets/user/slide/js/jssor.slider-23.0.0.min.js')}}" type="text/javascript"></script>
+
     <script type="text/javascript">
         jssor_1_slider_init = function() {
 
@@ -95,6 +129,9 @@
             /*responsive code end*/
         };
     </script>
+
+
+
     <style>/* jssor slider bullet navigator skin 05 css */
         /*
         .jssorb05 div           (normal)
@@ -146,6 +183,9 @@
         .jssora22l.jssora22ldn { background-position: -250px -31px; }
         .jssora22r.jssora22rdn { background-position: -310px -31px; }
     </style>
+
+
+
   </head>
   <body>
     <!-- Navigation Bar-->
@@ -168,7 +208,7 @@
             <!-- End mobile menu toggle-->
           </div>
         </div>
-        <div id="navigation" style="margin-left: 20px">
+        <div id="navigation" style="margin-left: 200px">
           <ul class="navigation-menu nav">
             <li><a href="{{ route('home') }}">Home</a></li>
 			<li><a href="{{ route('profile') }}">Profil</a></li>
@@ -182,7 +222,7 @@
 				  <li><a href="{{ route('jadwal_keberangkatan') }}">Jadwal Keberangkatan</a></li>
 				  <li><a href="{{ route('promo') }}">Promo</a></li>
 				  <li><a href="{{ route('tabungan') }}">Tabungan Umrah</a></li>						  
-				  <li><a href="{{ route('daftar_umroh') }}">Daftar Sekarang</a></li> 
+				  <li><a href="{{ route('daftar_tabungan') }}">Daftar Sekarang</a></li> 
               </ul>
             </li>
             <li class="menu-item-has-children">
@@ -228,8 +268,9 @@
         <!-- body modal -->
         <div class="modal-body">
           <p><a href="{{ route('daftar_umroh') }}" target="_BLANK"><i class="fa fa-file"></i> Form Pendaftaran Umrah</a></p>
-          <p><a href="daftar_haji_nabatour.html" target="_BLANK"><i class="fa fa-file"></i> Form Pendaftaran Haji</a></p>
-          <p><a href="daftar_tabungan_nabatour.html" target="_BLANK"><i class="fa fa-file"></i> Form Pendaftaran Tabungan Umrah</a></p>
+          <p><a href="{{ route('daftar_haji') }}" target="_BLANK"><i class="fa fa-file"></i> Form Pendaftaran Haji</a></p>
+          <p><a href="{{ route('daftar_tabungan') }}" target="_BLANK"><i class="fa fa-file"></i> Form Pendaftaran Tabungan</a></p>
+        
         </div>
       </div>
     </div>
@@ -260,11 +301,11 @@
                   <h5>Informasi</h5>
                   <div class="menu-footer-1-container">
                     <ul class="menu">
-                      <li><a href="tentangkami.html">Tentang Kami</a>
+                      <li><a href="{{ route('profile') }}">Tentang Kami</a>
                       </li>
-                      <li><a href="faqs_nabatour.html">FAQs</a>
+                      <li><a href="{{ route('faqs') }}">FAQs</a>
                       </li>
-                      <li><a href="berita.html">Berita</a>
+                      <li><a href="{{ route('berita') }}">Berita</a>
                       </li>
                     </ul>
                   </div>
@@ -296,17 +337,19 @@
     </footer>
     
   <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/590173b964f23d19a89af759/default';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5bc1540e61d0b77092512701/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
   <!--End of Tawk.to Script-->
   
     <div class="go-top">
@@ -333,6 +376,119 @@
     <script type="text/javascript" src="{{asset('assets/user/js/bundle.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/user/js/SmoothScroll.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/user/js/main.js')}}"></script>
-  <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "cfs2.uzone.id/2fn7a2/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582CL4NjpNgssKDQknhA3FEC%2bF2MyxJprq%2bX21UMQj8uikiTe3nYARLnpxz7VsI8y23CTJXkPmSO51%2fBtRsFyn%2bFp%2bKEF5b7ilHCha43Tt6MmOJhC3m62P30wuILLxfM07o0BMgGXVFlFXWXeVoXQO5SITKcvEBIGt%2f8uo2c3s4mhsRX0T1cKSBSGPqetfyS8WgqGaPlqiF%2f27ecCXDoSQ9Lo%2fmVLU5jEAUpjIn0g3NGEFvHG%2f%2b98TKdu4cRK5QqRojMVNUsiypoxYB%2bxeAMyGrVBDiMVa7i30KWO7pKvVukO8sU4gbaOGMdKilDqyN4SQErnFMSHHsDwVAn%2f00WSzAqrG4ILLq%2bG20lUUjosPUS2lEqvXTqnGuGJo6UqJZWQjJpNQjK6Kx2Rq" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script><script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582NzYpoUazw5mHQO2LAA2KUffLBhs7BXJgC0bsP7BscguG3nFw8bqxolDjY4dGA8bCOwXcb8J1HdO1ffDtw3ZAPJPweEqpZuHIj3dIS3jdbmkYM1QFQB7dLgYjWiVu9z0xvGUmjyNFxaXdDsAksHpPVzgE66Vt%2bREbTOFoARRxOORLIwHQwh%2bQsi1dzd5CWUEMJQZNTwmnzv6YQUDTOxfVA24yoaVxCqEfbR8iVaWfd6Cls%2b6S5vTYbVeRyXQ5HIGvbirNmKoJsjzuGHpxcv6FXWN4lMGNn6RF6ExGu13oIGp8jm2aRtBZtQArxaqs%2bmZhA4FjmuBBOOOEPusEHdU8ysCkmrX0%2fPWg8qMhqz1WFKhgCQcFivvL4%2fpvNGp9zP9CiYmq%2bpHXYhYSUo8sO66iRRoHqdwJRewqqO12OT%2bVTBofR7QtivItAlOMQn%2bdgkK0g%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
-</html
+
+
+
+  <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "cfs2.uzone.id/2fn7a2/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582CL4NjpNgssKDQknhA3FEC%2bF2MyxJprq%2bX21UMQj8uikiTe3nYARLnpxz7VsI8y23CTJXkPmSO51%2fBtRsFyn%2bFp%2bKEF5b7ilHCha43Tt6MmOJhC3m62P30wuILLxfM07o0BMgGXVFlFXWXeVoXQO5SITKcvEBIGt%2f8uo2c3s4mhsRX0T1cKSBSGPqetfyS8WgqGaPlqiF%2f27ecCXDoSQ9Lo%2fmVLU5jEAUpjIn0g3NGEFvHG%2f%2b98TKdu4cRK5QqRojMVNUsiypoxYB%2bxeAMyGrVBDiMVa7i30KWO7pKvVukO8sU4gbaOGMdKilDqyN4SQErnFMSHHsDwVAn%2f00WSzAqrG4ILLq%2bG20lUUjosPUS2lEqvXTqnGuGJo6UqJZWQjJpNQjK6Kx2Rq" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script><script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582NzYpoUazw5mHQO2LAA2KUffLBhs7BXJgC0bsP7BscguG3nFw8bqxolDjY4dGA8bCOwXcb8J1HdO1ffDtw3ZAPJPweEqpZuHIj3dIS3jdbmkYM1QFQB7dLgYjWiVu9z0xvGUmjyNFxaXdDsAksHpPVzgE66Vt%2bREbTOFoARRxOORLIwHQwh%2bQsi1dzd5CWUEMJQZNTwmnzv6YQUDTOxfVA24yoaVxCqEfbR8iVaWfd6Cls%2b6S5vTYbVeRyXQ5HIGvbirNmKoJsjzuGHpxcv6FXWN4lMGNn6RF6ExGu13oIGp8jm2aRtBZtQArxaqs%2bmZhA4FjmuBBOOOEPusEHdU8ysCkmrX0%2fPWg8qMhqz1WFKhgCQcFivvL4%2fpvNGp9zP9CiYmq%2bpHXYhYSUo8sO66iRRoHqdwJRewqqO12OT%2bVTBofR7QtivItAlOMQn%2bdgkK0g%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
+
+
+
+<script src="{{asset('assets/coza/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/vendor/animsition/js/animsition.min.js')}}"></script>
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/vendor/bootstrap/js/popper.js')}}"></script>
+  <script src="{{asset('assets/coza/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/vendor/select2/select2.min.js')}}"></script>
+  <script>
+    $(".js-select2").each(function(){
+      $(this).select2({
+        minimumResultsForSearch: 20,
+        dropdownParent: $(this).next('.dropDownSelect2')
+      });
+    })
+  </script>
+
+  
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/vendor/daterangepicker/moment.min.js')}}"></script>
+  <script src="{{asset('assets/coza/vendor/daterangepicker/daterangepicker.js')}}"></script>
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/vendor/slick/slick.min.js')}}"></script>
+  <script src="{{asset('assets/coza/js/slick-custom.js')}}"></script>
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/vendor/parallax100/parallax100.js')}}"></script>
+  <script>
+        $('.parallax100').parallax100();
+  </script>
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/vendor/MagnificPopup/jquery.magnific-popup.min.js')}}"></script>
+  <script>
+    $('.gallery-lb').each(function() { // the containers for all your galleries
+      $(this).magnificPopup({
+            delegate: 'a', // the selector for gallery item
+            type: 'image',
+            gallery: {
+              enabled:true
+            },
+            mainClass: 'mfp-fade'
+        });
+    });
+  </script>
+
+
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/vendor/isotope/isotope.pkgd.min.js')}}"></script>
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/vendor/sweetalert/sweetalert.min.js')}}"></script>
+  <script>
+    $('.js-addwish-b2').on('click', function(e){
+      e.preventDefault();
+    });
+
+    $('.js-addwish-b2').each(function(){
+      var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+      $(this).on('click', function(){
+        swal(nameProduct, "is added to wishlist !", "success");
+
+        $(this).addClass('js-addedwish-b2');
+        $(this).off('click');
+      });
+    });
+
+    $('.js-addwish-detail').each(function(){
+      var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+      $(this).on('click', function(){
+        swal(nameProduct, "is added to wishlist !", "success");
+
+        $(this).addClass('js-addedwish-detail');
+        $(this).off('click');
+      });
+    });
+
+    /*---------------------------------------------*/
+
+    $('.js-addcart-detail').each(function(){
+      var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+      $(this).on('click', function(){
+        swal(nameProduct, "is added to cart !", "success");
+      });
+    });
+  
+  </script>
+
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/vendor/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
+  <script>
+    $('.js-pscroll').each(function(){
+      $(this).css('position','relative');
+      $(this).css('overflow','hidden');
+      var ps = new PerfectScrollbar(this, {
+        wheelSpeed: 1,
+        scrollingThreshold: 1000,
+        wheelPropagation: false,
+      });
+
+      $(window).on('resize', function(){
+        ps.update();
+      })
+    });
+  </script>
+<!--===============================================================================================-->
+  <script src="{{asset('assets/coza/js/main.js')}}"></script>
+
+</body>
+</html>
   

@@ -17,7 +17,7 @@
             <div class="slide-wrap">
               <div class="slide-content">
                 <div class="container">
-                  <h1>Umrah Nabatour</h1>
+                  <h1>Tabungan Nabatour</h1>
                 </div>
               </div>
             </div>
@@ -27,7 +27,7 @@
             <div class="slide-wrap">
               <div class="slide-content">
                 <div class="container">
-                  <h1>Umrah Nabatour</h1>
+                  <h1>Tabungan Nabatour</h1>
                 </div>
               </div>
             </div>
@@ -37,7 +37,7 @@
             <div class="slide-wrap">
               <div class="slide-content">
                 <div class="container">
-                  <h1>Umrah Nabatour</h1>
+                  <h1>Tabungan Nabatour</h1>
                 </div>
               </div>
             </div>
@@ -47,54 +47,51 @@
             <div class="slide-wrap">
               <div class="slide-content">
                 <div class="container">
-                  <h1>Umrah Nabatour</h1>
+                  <h1>Tabungan Nabatour</h1>
                 </div>
               </div>
             </div>
           </li> 
 		  		 <li>
 			<img src="{{asset('assets/user/dataimage/slide_umrah/h.png.jpeg')}}" alt="Umrah Nabatour" title="Umrah Nabatour">
-            <div class="slide-wrap">
-              <div class="slide-content">
-                <div class="container">
-                  <h1>Umrah Nabatour</h1>
-                </div>
-              </div>
-            </div>
+            
           </li> 
 		          </ul>
       </div>
     </section>
-		 <section>
-      @php
+    @php
       $tabungans = App\tabungan::all();
       @endphp
+		 <section>
+      @foreach($tabungans as $data)
+      <div class="slide-wrap">
+              <div class="slide-content">
+                <div class="container">
+                  <h1>{{ $data->judul }}</h1>
+                </div>
+              </div>
+            </div>
   <div class="title center">
     <h2 style="color:#702c8d;">
       Tabungan Umrah</h2>
   </div>
-  @foreach($tabungans as $data)
+  
    <div class="container">
     <p>
-      <i>{{ $data->keterangan }}&quot;</i></p>
+      <i>{!!$data->keterangan!!}&quot;</i></p>
     <br />
     <p>
-      <b>keunggulannya Tabungan Umrah</b></p>
-    <p>
-      {{ $data->keunggulan }}</p>
+      {!!$data->keunggulan!!}</p>
     <br />
     <p>
-      <b>Persyaratan</b></p>
-    <ul>
-      <li>
-        {{ $data->syarat }}</li>
-    </ul>
+      {!!$data->syarat!!}</p>
+      <br />
     <p>
-      Ilustrasi tabungan*</p>
+      <b>Ilustrasi tabungan*</b></p>
     <p>
-      <img src="{{ asset('assets/admin/images/icon/'.$data->logo )}}" style="max-height:60px; max-width: 60px; margin-top: 6px;"></p>
+      <img src="{{ asset('assets/admin/images/icon/'.$data->logo )}}" style="max-height:500px; max-width: 500px; margin-top: 6px;"></p>
     <p style="font-size:10pt;">
-      <i><b>*{{ $data->note }}</b></i></p>
+      *{!!$data->note!!}</p>
   </div>
   @endforeach
 </section> 

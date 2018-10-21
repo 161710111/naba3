@@ -23,11 +23,11 @@
                   <h5>Informasi</h5>
                   <div class="menu-footer-1-container">
                     <ul class="menu">
-                      <li><a href="tentangkami.html">Tentang Kami</a>
+                      <li><a href="{{ route('profile') }}">Tentang Kami</a>
                       </li>
-                      <li><a href="faqs_nabatour.html">FAQs</a>
+                      <li><a href="{{ route('faqs') }}">FAQs</a>
                       </li>
-                      <li><a href="berita.html">Berita</a>
+                      <li><a href="{{ route('berita') }}">Berita</a>
                       </li>
                     </ul>
                   </div>

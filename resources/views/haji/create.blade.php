@@ -58,7 +58,7 @@
 
 			  		<div class="form-group {{ $errors->has('harga') ? ' has-error' : '' }}">
 			  			<label class="control-label">harga</label>	
-			  			<input type="text" name="harga" class="form-control"  required>
+			  			<textarea  name="harga"   required></textarea>
 			  			@if ($errors->has('harga'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('harga') }}</strong>
@@ -68,7 +68,7 @@
 
 			  		<div class="form-group {{ $errors->has('fasilitas') ? ' has-error' : '' }}">
 			  			<label class="control-label">fasilitas</label>	
-			  			<input type="text" name="fasilitas" class="form-control"  required>
+			  			<textarea  name="fasilitas"   required></textarea>
 			  			@if ($errors->has('fasilitas'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('fasilitas') }}</strong>
@@ -78,7 +78,7 @@
 
 			  		<div class="form-group {{ $errors->has('batal') ? ' has-error' : '' }}">
 			  			<label class="control-label">batal</label>	
-			  			<textarea name="batal" class="ckeditor"  required></textarea>
+			  			<textarea  name="batal"   required></textarea>
 			  			@if ($errors->has('batal'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('batal') }}</strong>
@@ -88,7 +88,7 @@
 
 			  		<div class="form-group {{ $errors->has('biayamasuk') ? ' has-error' : '' }}">
 			  			<label class="control-label">biayamasuk</label>	
-			  			<textarea name="biayamasuk" class="ckeditor"  required></textarea>
+			  			<textarea  name="biayamasuk"   required></textarea>
 			  			@if ($errors->has('biayamasuk'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('biayamasuk') }}</strong>
@@ -98,7 +98,7 @@
 
 			  		<div class="form-group {{ $errors->has('biayatidak') ? ' has-error' : '' }}">
 			  			<label class="control-label">biayatidak</label>	
-			  			<textarea name="biayatidak" class="ckeditor"  required></textarea>
+			  			<textarea  name="biayatidak"   required></textarea>
 			  			@if ($errors->has('biayatidak'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('biayatidak') }}</strong>
@@ -108,7 +108,7 @@
 
 			  		<div class="form-group {{ $errors->has('syarat') ? ' has-error' : '' }}">
 			  			<label class="control-label">syarat</label>	
-			  			<textarea name="syarat" class="ckeditor"  required></textarea>
+			  			<textarea  name="syarat"   required></textarea>
 			  			@if ($errors->has('syarat'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('syarat') }}</strong>
@@ -118,7 +118,7 @@
 
 			  		<div class="form-group {{ $errors->has('daftar') ? ' has-error' : '' }}">
 			  			<label class="control-label">daftar</label>	
-			  			<textarea name="daftar" class="ckeditor"  required></textarea>
+			  			<textarea  name="daftar"   required></textarea>
 			  			@if ($errors->has('daftar'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('daftar') }}</strong>

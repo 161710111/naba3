@@ -27,24 +27,18 @@
                 <img src="{{ asset('assets/admin/images/icon/'.$data->logo )}}" style="max-height:90px; max-width: 90px; margin-top: 6px;">
                </div>
 				<div class="col-md-10">
-				<p style="font-size:15px;">{{$data->keterangan}}</p>
+				<p style="font-size:15px;">{!!$data->keterangan!!}</p>
                 <footer style="font-size:15px; color:white;">{{$data->nama}}</footer>
 				</div>
 			  </blockquote>
+        @endforeach
           </div>
          	
 					   <div class="col-md-12" style="margin-bottom:5%;">
-              <blockquote>
-                 @endforeach
-      
-				<p style="float:right; color:white;">&nbsp;<strong>1</strong>&nbsp;<a href="index.php/index/testimonial/10.html">2</a>&nbsp;<a href="index.php/index/testimonial/20.html">3</a>&nbsp;<a href="index.php/index/testimonial/30.html">4</a>&nbsp;<a href="index.php/index/testimonial/10.html">Next</a>&nbsp;&nbsp;<a href="index.php/index/testimonial/40.html">Last &rsaquo;</a></p>
-			  </blockquote>
+              
           </div>
         </div>
       </div>
-	   <div class="title center">
-          <h4 style="color:white;"><a href="index/add_testimonial.html"><b><i class="fa fa-send"></i> Kirim Testimoni</b></a></h4>
-		  <br>
-        </div>
+	   
     </section>
 @endsection

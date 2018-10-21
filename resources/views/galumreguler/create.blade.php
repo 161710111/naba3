@@ -14,7 +14,7 @@
 			  	</div>
 			  </div>
 			  <div class="panel-body">
-			  	<form action="{{ route('galmanhaji.store') }}" method="post" enctype="multipart/form-data" >
+			  	<form action="{{ route('galumreguler.store') }}" method="post" enctype="multipart/form-data" >
 			  		{{ csrf_field() }}
 
 			  		<div class="form-group {{ $errors->has('logo') ? ' has-error' : '' }}">

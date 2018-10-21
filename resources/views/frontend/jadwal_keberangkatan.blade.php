@@ -28,19 +28,47 @@
       <div class="section-scrolling"><a id="scroll-section" href="#"><i class="hc-angle-down"></i></a>
       </div>
     </section>
-        <section class="p-0">
-       <div class="container">
-       <br><br><br>
+        <section class="grey-bg">
+      <div class="container">
+              @php
+      $jadwalumrohs = App\Jadwalumroh::all();
+      @endphp
+        <div class="row">
+          
             <div class="title center">
-              <h2>JADWAL KEBERANGKATAN 2017-2018</h2>
+              <h2>JADWAL KEBERANGKATAN</h2>
             </div>
-      <br><br>
-          <div class="col-md-12" style="text-align:center;">
-      <p>
-  <img alt="Jadwal Keberangkatan Umrah Nabatour" src="http://nabatour.com/asset/kcfinder/upload/images/Assalaam_Naba%20Tour_E1_Ranc%20Tabel%20Jadwal%20Keberangkatan_2103_16%20Juni%2017-01.png" style="width: 100%;" title="Jadwal Keberangkatan Umrah Nabatour" /></p>
-      </div>
+            <br>
+            <br>
+
+             @foreach($jadwalumrohs as $data)
+                  <div class="col-md-4">
+             
+              <article class="card-post">
+                <div class="post-media masonry-media">
+                </div>
+                <div class="post-body">
+                  <div class="col-md-12">
+                 <div class="title center">
+              <h2>{{ $data->bulan }}</h2>
+            </div>
+            </div>
+                  <p>
+                    <p><p style="box-sizing: border-box; margin: 0px 0px 20px; line-height: 1.6; font-family: NexaLight; color: rgb(122, 122, 122); font-size: 17px;">{!!$data->keterangan!!}</p>
+          </p>
+                  
+                </div>
+              </article>
+             
+            </div>
+             @endforeach
+                  
+                      
+        <p style="text-align:right;"></p>
+        </div>
       </div>
     </section>
 		  </div>
     </section>
+    
     @endsection

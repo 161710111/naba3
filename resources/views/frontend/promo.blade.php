@@ -28,17 +28,24 @@
       <div class="section-scrolling"><a id="scroll-section" href="#"><i class="hc-angle-down"></i></a>
       </div>
     </section>
-        <section class="p-0">
-		   <div class="container">
-		   <br><br><br>
-            <div class="title center">
-              <h2>Promo</h2>
-            </div>
-			<br><br>
-          <div class="col-md-12" style="text-align:center;">
-			<p>
-	<img alt="" src="http://nabatour.com/asset/kcfinder/upload/images/promo/naba3.jpg" style="width: 100%;" /></p>
-		  </div>
-		  </div>
-    </section>
+        <section>
+          @php
+          $promos = App\Promo::all();
+          @endphp
+  <div class="container">
+    <div class="title center">
+      <br />
+      <h2 style="color:#702c8d;">
+        Promo</h2>
+    </div>
+    
+    <div class="row">
+      @foreach($promos as $data)
+      <div class="col-sm-4">
+       <img src="{{ asset('assets/admin/images/icon/'.$data->foto )}}" style="max-height:380px; max-width: 400px; margin-top: 6px;"></div>
+    @endforeach
+    </div>
+    
+  </div>
+</section>
     @endsection

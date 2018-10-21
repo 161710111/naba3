@@ -28,17 +28,44 @@
       <div class="section-scrolling"><a id="scroll-section" href="#"><i class="hc-angle-down"></i></a>
       </div>
     </section>
-        <section class="p-0">
-		   <div class="container">
-		   <br><br><br>
+        <section class="grey-bg">
+      <div class="container">
+              @php
+      $jadwalhajis = App\Jadwalhaji::all();
+      @endphp
+        <div class="row">
+          
             <div class="title center">
-              <h2>Jadwal Manasik</h2>
+              <h2>JADWAL MANASIK</h2>
             </div>
-			<br><br>
-          <div class="col-md-12" style="text-align:center;">
-			<p>
-	<img alt="" src="http://nabatour.com/asset/kcfinder/upload/images/promo/naba3.jpg" style="width: 100%;" /></p>
-		  </div>
-		  </div>
+            <br>
+            <br>
+            @foreach($jadwalhajis as $data)
+                  <div class="col-md-4">
+             
+              <article class="card-post">
+                <div class="post-media masonry-media">
+                </div>
+                <div class="post-body">
+                  <div class="col-md-12">
+                 <div class="title center">
+              <h2>{{ $data->bulan }}</h2>
+            </div>
+            </div>
+                  <p>
+                    <p><p style="box-sizing: border-box; margin: 0px 0px 20px; line-height: 1.6; font-family: NexaLight; color: rgb(122, 122, 122); font-size: 17px;">{!!$data->keterangan!!}</p>
+          </p>
+                  
+                </div>
+              </article>
+              
+            </div>
+              @endforeach    
+                      
+        <p style="text-align:right;"></p>
+        </div>
+      </div>
+    </section>
+      </div>
     </section>
     @endsection

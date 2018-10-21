@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 		
-    <title>Wisata Muslim Mesir Nabatour</title>
+    <title>Wisata Muslim Nabatour</title>
       @extends('layouts.frontend')
       @section('content')
 	<!--POPUP-->
@@ -39,7 +39,7 @@
         <div class="v-center">
           <div class="container">
             <div class="title center">
-              <h1>Wisata Muslim Mesir</h1>
+              <h1>Wisata Muslim Nabatour</h1>
             </div>
           </div>
         </div>
@@ -53,15 +53,13 @@
 		
           <article class="post-single b-0">
             <div class="post-body">
-				<h2 style="margin: 0px 0px 10px; padding: 0px; font-weight: 400; line-height: 24px; font-family: Nexalight; font-size: 24px; color: rgb(0, 0, 0);">{{ $wisata->lokasi}}</h2>
+				<h2 style="margin: 0px 0px 10px; padding: 0px; font-weight: 400; line-height: 24px; font-family: Nexalight; font-size: 24px; color: rgb(0, 0, 0);">{{ $lokasi->nama }}</h2>
 <p font-size:="" open="" style="margin: 0px 0px 15px; padding: 0px; text-align: justify; color: rgb(0, 0, 0); font-family: NexaLight;">
-	<strong style="margin: 0px; padding: 0px;">{{ $wisata->keterangan}}</p></strong>
+	<strong style="margin: 0px; padding: 0px;">{!!$lokasi->keterangan!!}</p></strong>
 			</div>
           </article>
 		  
-          <div class="post-share">
-            <h5><a href="../tours.html">Wisata Lain</a></h5>
-          </div>
+          
         </div>
       </div>
     </section>

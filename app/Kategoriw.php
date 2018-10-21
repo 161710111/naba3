@@ -14,6 +14,11 @@ class Kategoriw extends Model
         return $this->hasMany('App\Wisata', 'kategoriw_id');
     }
 
+    public function Lokasi()
+    {
+        return $this->hasMany('App\Lokasi', 'kategoriw_id');
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';

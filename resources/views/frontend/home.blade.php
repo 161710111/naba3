@@ -39,28 +39,28 @@
       <div class="container">
         <div class="col-sm-4">
           <div class="icon-box">
-            <a href="menu_umrah.html"><div class="ib-icon"><img src="{{asset('assets/user/images/kabah.png')}}" width="50%" alt="Paket-Umrah-nabatour" title="Paket-Umrah-nabatour">
+            <a href="{{ route('menu_umroh') }}"><div class="ib-icon"><img src="{{asset('assets/user/images/kabah.png')}}" width="50%" alt="Paket-Umrah-nabatour" title="Paket-Umrah-nabatour">
             </div></a>
             <div class="ib-content">
-              <a href="menu_umrah.html"><h4>Paket Umrah</h4></a>
+              <a href="{{ route('menu_umroh') }}"><h4>Paket Umrah</h4></a>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="icon-box">
-            <a href="menu_haji.html"><div class="ib-icon"><img src="{{asset('assets/user/images/madina.png')}}" width="50%" alt="Paket-Haji-nabatour" title="Paket-Haji-nabatour">
+            <a href="{{ route('menu_haji') }}"><div class="ib-icon"><img src="{{asset('assets/user/images/madina.png')}}" width="50%" alt="Paket-Haji-nabatour" title="Paket-Haji-nabatour">
             </div></a>
             <div class="ib-content">
-               <a href="menu_haji.html"><h4>KBIH</h4></a>
+               <a href="{{ route('menu_haji') }}"><h4>KBIH</h4></a>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="icon-box"> 
-            <a href="wisata_nabatour.html"><div class="ib-icon"><i class="fa fa-map"></i>
+            <a href="{{ route('menu_wisata') }}"><div class="ib-icon"><i class="fa fa-map"></i>
             </div></a>
             <div class="ib-content">
-              <a href="wisata_nabatour.html" data-toggle="modal" data-target="#myModal"><h4>Wisata Muslim</h4></a>
+              <a href="{{ route('menu_wisata') }}" data-toggle="modal" data-target="#myModal"><h4>Wisata Muslim</h4></a>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
 <br>
 Selain menyediakan paket umroh dan tour muslim sebagai bentuk layanan yang tersedia, NABATOUR juga  menghadirkan pembimbing-pembimbing ibadah bekerjasama dengan KBIH Assalaam, yang ahli dan mendalami bidang Fiqih Islam, terutama untuk masalah ibadah umroh dan haji. Kami berusaha memberikan bimbingan sejak sebelum berangkat, pada saat pelaksanan dan pasca ibadah haji dan umroh, sebagai bentuk tanggung jawab moral kami, bahwa ibadah yang Anda jalani telah sesuai dengan petunjuk Allah  dan Sunah Nabi Muhammad SAW.                                                                                             </p></p>
 										<br>
-					<a class="small-link black-text" href="tentangkami.html"><span>Selengkapnya</span><i class="hc-arrow-right"></i></a>
+					<a class="small-link black-text" href="{{ route('profile') }}"><span>Selengkapnya</span><i class="hc-arrow-right"></i></a>
 				  </div>
               </div>
             </div>
@@ -112,6 +112,8 @@ Selain menyediakan paket umroh dan tour muslim sebagai bentuk layanan yang terse
       </div>
     </section>
 	
+
+
 	<section class="white-bg">
     @php
     $galerihomes = App\galerihome::all();
@@ -135,7 +137,7 @@ Selain menyediakan paket umroh dan tour muslim sebagai bentuk layanan yang terse
         </div>
         
     <br>
-      <a class="small-link black-text" href="galeri_manasik_umrah.html"><p style="text-align:center;">Lihat Semua Foto <i class="hc-arrow-right"></i></p></a>
+      <center><a class="small-link black-text" href="{{ route('galeri') }}" <p style="text-align:center;">Lihat Semua Foto <i class="hc-arrow-right"></i></p></a></center>
       </div>
     </section>
 
@@ -149,7 +151,7 @@ Selain menyediakan paket umroh dan tour muslim sebagai bentuk layanan yang terse
             <div class="dylan-tabs mt-50 mb-50">
               <div class="tab-content text-center">
                   <div class="wpb_wrapper">
-            <iframe src="https://snapwidget.com/embed/398168" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:125px"></iframe>
+            <iframe src="https://snapwidget.com/embed/398168" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:300%; height:125px"></iframe>
           </div>
               </div>
             </div>
@@ -201,9 +203,14 @@ Selain menyediakan paket umroh dan tour muslim sebagai bentuk layanan yang terse
       <div class="container">
         <div class="row">
           <div class="col-md-12">
+            <div class="title center">
+              <h2>Berita</h2>
+            </div>
+            @foreach($berita as $data)
                         <div class="col-md-4">
+                          
               <article class="card-post">
-                @foreach($berita as $data)
+                
                 <div class="post-media masonry-media">
                   <img src="{{ asset('assets/admin/images/icon/'.$data->foto )}}" style="max-height:400px; max-width: 400px; margin-top: 6px;">
                 </div>
@@ -211,14 +218,17 @@ Selain menyediakan paket umroh dan tour muslim sebagai bentuk layanan yang terse
                 <p style="color:black;"><b>{{ $data->judul }}</b></p>
                   <p>
                     <p><p style="box-sizing: border-box; margin: 0px 0px 20px; line-height: 1.6; font-family: NexaLight; color: rgb(122, 122, 122); font-size: 17px;">
-                        {!!$data->isi!!}</p>
+                        {!! str_limit($data->isi,250) !!}</p>
+                        
           </p>
                   <div class="post-info"><a class="small-link black-text" href="/detailberita/{{$data->slug}}"><span>Selengkapnya</span><i class="hc-arrow-right"></i></a>
                   </div>
                 </div>
-                @endforeach
+                
               </article>
+              
             </div>
+            @endforeach
                       </div>
         <p style="text-align:right;"></p>
         </div>

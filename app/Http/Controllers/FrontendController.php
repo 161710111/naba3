@@ -9,9 +9,11 @@ use App\Umroh;
 use App\Kategorie;
 use App\Haji;
 use App\Kategoria;
+use App\Lokasi;
 use App\Wisata;
 use App\Kategoriw;
 use App\Daftar;
+use App\Youtube;
 
 class FrontendController extends Controller
 {
@@ -42,7 +44,8 @@ class FrontendController extends Controller
 
     public function index6()
     {
-        return view('frontend.galeri',compact('galeri'));
+        $yt = Youtube::all();
+        return view('frontend.galeri',compact('galeri','yt'));
     }
 
     public function index7()
@@ -111,6 +114,16 @@ class FrontendController extends Controller
         return view('frontend.sukses',compact('sukses'));
     }
 
+    public function index23()
+    {
+        return view('frontend.daftar_haji',compact('daftar_haji'));
+    }
+
+    public function index24()
+    {
+        return view('frontend.daftar_tabungan',compact('daftar_tabungan'));
+    }
+
     public function home()
     {
         $berita = Berita::all();
@@ -144,13 +157,15 @@ class FrontendController extends Controller
     public function wisatakategori(Kategoriw $kategoriw)
     {
         $wisata = $kategoriw->Wisata()->latest()->paginate(5);
-        return view('frontend.wisata', compact('wisata'));
+        $lokasi = $kategoriw->Lokasi()->latest()->paginate(5);
+        return view('frontend.wisata', compact('wisata','lokasi'));
+
     }
 
-    public function nampil(Wisata $wisata)
+    public function nampil(Lokasi $lokasi)
     {
         // $berita = Berita::findOrFail($id);
-        return view('frontend.detail_wisata',compact('wisata'));
+        return view('frontend.detail_wisata',compact('lokasi'));
     }
 
     public function create()
@@ -215,4 +230,126 @@ class FrontendController extends Controller
         $daftars->save();
         return redirect()->route('sukses.index');
     }
+
+
+    public function create()
+    {
+        return view('daftarhaji.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $this->validate($request,[
+            
+            'paket' => 'required|',
+            'paspor' => 'required|',
+            'nama' => 'required|',
+            'tempatlahir' => 'required|',
+            'tgllahir' => 'required|',
+            'jk' => 'required|',
+            'alamat' => 'required|',
+            'notelp' => 'required|',
+            'status' => 'required|',
+            'pekerjaan' => 'required|',
+            'jabatan' => 'required|',
+            'almkantor' => 'required|',
+            'notelpkantor' => 'required|',
+            'email' => 'required|',
+            'keterangan' => 'required|'
+              
+        ]);
+        $daftarhajis = new Daftarhaji;
+        $daftarhajis->foto = $request->foto;
+        $daftarhajis->paket = $request->paket;
+        $daftarhajis->paspor = $request->paspor;
+        $daftarhajis->nama = $request->nama;
+        $daftarhajis->tempatlahir = $request->tempatlahir;
+        $daftarhajis->tgllahir = $request->tgllahir;
+        $daftarhajis->jk = $request->jk;
+        $daftarhajis->alamat = $request->alamat;
+        $daftarhajis->notelp = $request->notelp;
+        $daftarhajis->status = $request->status;
+        $daftarhajis->pekerjaan = $request->pekerjaan;
+        $daftarhajis->jabatan = $request->jabatan;
+        $daftarhajis->almkantor = $request->almkantor;
+        $daftarhajis->notelpkantor = $request->notelpkantor;
+        $daftarhajis->email = $request->email;
+        $daftarhajis->keterangan = $request->keterangan;
+
+        //apload foto
+        if ($request->hasFile('foto')){
+            $file=$request->file('foto');
+            $destinationPath=public_path().'/assets/admin/images/icon/';
+            $filename=str_random(6).'_'.$file->getClientOriginalName();
+            $uploadSucces= $file->move($destinationPath,$filename);
+            $daftarhajis->foto= $filename;
+        }
+
+        $daftarhajis->save();
+        return redirect()->route('frontend.sukses');
+    }
+
+
+    public function create()
+    {
+        return view('daftartabungan.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $this->validate($request,[
+            
+            'nama' => 'required|',
+            'tempatlahir' => 'required|',
+            'tgllahir' => 'required|',
+            'jk' => 'required|',
+            'tanda' => 'required|',
+            'notanda' => 'required|',
+            'alamatsesuai' => 'required|',
+            'alamatsurat' => 'required|',
+            'email' => 'required|',
+            'rencana' => 'required|',
+            'pendamping' => 'required|',
+            'paket' => 'required|',
+            'jumlahsetoran' => 'required|',
+            'setoran' => 'required|'
+            
+              
+        ]);
+        $daftartabungans = new Daftartabungan;
+        $daftartabungans->nama = $request->nama;
+        $daftartabungans->tempatlahir = $request->tempatlahir;
+        $daftartabungans->tgllahir = $request->tgllahir;
+        $daftartabungans->jk = $request->jk;
+        $daftartabungans->foto = $request->foto;
+        $daftartabungans->tanda = $request->tanda;
+        $daftartabungans->notanda = $request->notanda;
+        $daftartabungans->alamatsesuai = $request->alamatsesuai;
+        $daftartabungans->alamatsurat = $request->alamatsurat;
+        $daftartabungans->email = $request->email;
+        $daftartabungans->rencana = $request->rencana;
+        $daftartabungans->pendamping = $request->pendamping;
+        $daftartabungans->paket = $request->paket;
+        $daftartabungans->jumlahsetoran = $request->jumlahsetoran;
+        $daftartabungans->setoran = $request->setoran;
+        
+
+        $daftartabungans->save();
+        return redirect()->route('frontend.sukses');
+    }
 }
+
+
+

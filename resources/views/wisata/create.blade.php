@@ -4,6 +4,28 @@
 <br>
 <br>
 
+
+<script src="{{ asset('assets/tinymce/js/tinymce/tinymce.js') }}"></script>
+<script type="text/javascript">
+    tinymce.init({
+  selector: 'textarea',
+  height: 300,
+  theme: 'modern',
+  plugins: 'print preview fullpage  searchreplace autolink directionality  visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount   imagetools  contextmenu colorpicker textpattern help',
+  toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+  image_advtab: true,
+  templates: [
+    { title: 'Test template 1', content: 'Test 1' },
+    { title: 'Test template 2', content: 'Test 2' }
+  ],
+  content_css: [
+    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+    '//www.tinymce.com/css/codepen.min.css'
+  ]
+ });
+
+</script>
+
 <div class="row">
 	<div class="container">
 		<div class="col-md-12">
@@ -27,7 +49,7 @@
 
 			  		<div class="form-group {{ $errors->has('isi') ? ' has-error' : '' }}">
 			  			<label class="control-label">isi</label>	
-			  			<input type="text" name="isi" class="form-control"  required>
+			  			<textarea  name="isi"   required></textarea>
 			  			@if ($errors->has('isi'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('isi') }}</strong>
@@ -35,55 +57,7 @@
                         @endif
 			  		</div>
 
-			  		<div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">
-			  			<label class="control-label">foto</label>	
-			  			<input type="file" id="foto" name="foto" class="validate" accept="image/*" required>
-			  			@if ($errors->has('foto'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('foto') }}</strong>
-                            </span>
-                        @endif
-					</div>
-
-					<div class="form-group {{ $errors->has('lokasi') ? ' has-error' : '' }}">
-			  			<label class="control-label">lokasi</label>	
-			  			<input type="text" name="lokasi" class="form-control"  required>
-			  			@if ($errors->has('lokasi'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('lokasi') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
-
-			  		<div class="form-group {{ $errors->has('harga') ? ' has-error' : '' }}">
-			  			<label class="control-label">harga</label>	
-			  			<input type="text" name="harga" class="form-control"  required>
-			  			@if ($errors->has('harga'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('harga') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
-
-			  		<div class="form-group {{ $errors->has('hotel') ? ' has-error' : '' }}">
-			  			<label class="control-label">hotel</label>	
-			  			<input type="text" name="hotel" class="form-control"  required>
-			  			@if ($errors->has('hotel'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('hotel') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
-
-			  		<div class="form-group {{ $errors->has('keterangan') ? ' has-error' : '' }}">
-			  			<label class="control-label">keterangan</label>	
-			  			<input type="text" name="keterangan" class="form-control"  required>
-			  			@if ($errors->has('keterangan'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('keterangan') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
+			  		
 
 
 			  		<div class="form-group {{ $errors->has('kategoriw_id') ? ' has-error' : '' }}">

@@ -16,11 +16,11 @@ class CreateTabungansTable extends Migration
         Schema::create('tabungans', function (Blueprint $table) {
             $table->increments('id');
             $table->string('judul');
-            $table->string('keterangan');
-            $table->string('keunggulan');
-            $table->string('syarat');
+            $table->text('keterangan');
+            $table->text('keunggulan');
+            $table->text('syarat');
             $table->string('logo');
-            $table->string('note');
+            $table->text('note');
             $table->timestamps();
         });
     }

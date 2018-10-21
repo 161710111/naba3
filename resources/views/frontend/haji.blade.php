@@ -57,17 +57,15 @@
 				{{ $data->judul }}</h2>
 		</div>
 		<div class="container">
-			{{ $data->isi }} 
+			{!!$data->isi!!} 
 		</div>
 		<div class="col-md-12">
 			<div class="title">
 				<br />
 				<h3 style="color:#fff;">
 					</h3>
-					<p></p>
-			</div>
-			
-			
+					<p>{!!$data->harga!!} </p>
+			</div>				
 		</div>
 		
 		<br />
@@ -77,36 +75,8 @@
 				<br />
 				<h3 style="color:#fff;">
 					</h3>
-			</div>
-			<br />
-			<ol>
-				
-			</ol>
-		</div>
-		<br />
-		<br />
-		<div class="col-md-12">
-			<div class="title">
-				<br>
-				<br>
-				<h3 style="color:#fff;">
-					</h3>
-					
-			</div>
-			
-		</div>
-		
-		<div class="col-md-12">
-			<div class="title">
-				<br />
-				<br />
-				<br />
-				<h3 style="color:#fff;">
-					</h3>
-			</div>
-			<ol>
-				
-			</ol>
+					<p>{!!$data->fasilitas!!} </p>
+			</div>				
 		</div>
 		<br />
 		<br />
@@ -115,11 +85,52 @@
 				<br />
 				<h3 style="color:#fff;">
 					</h3>
-			</div>
-			<br />
-			<ol>
-				
-			</ol>
+					<p>{!!$data->batal!!} </p>
+			</div>				
+		</div>
+		<br />
+		<br />
+		<div class="col-md-12">
+			<div class="title">
+				<br />
+				<h3 style="color:#fff;">
+					</h3>
+					<p>{!!$data->biayamasuk!!} </p>
+			</div>				
+		</div>
+
+
+<br />
+		<br />
+		<div class="col-md-12">
+			<div class="title">
+				<br />
+				<h3 style="color:#fff;">
+					</h3>
+					<p>{!!$data->biayatidak!!} </p>
+			</div>				
+		</div>
+
+<br />
+		<br />
+		<div class="col-md-12">
+			<div class="title">
+				<br />
+				<h3 style="color:#fff;">
+					</h3>
+					<p>{!!$data->syarat!!} </p>
+			</div>				
+		</div>
+
+<br />
+		<br />
+		<div class="col-md-12">
+			<div class="title">
+				<br />
+				<h3 style="color:#fff;">
+					</h3>
+					<p>{!!$data->daftar!!} </p>
+			</div>				
 		</div>
 	</div>
 	@endforeach

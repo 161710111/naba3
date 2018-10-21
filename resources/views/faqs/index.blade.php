@@ -7,10 +7,14 @@
     <div class="container">
         <div class="col-md-12">
             <div class="panel panel-primary">
-              <div class="panel-heading">Faqs
-                <div class="panel-title pull-right"><a class="btn btn-warning" href="{{ route('faqs.create') }}">Tambah</a>
-                </div>
+              <center><h1><i style="font-size:25px;color:purple"> F A Q S </i></h1></center>
+              <div class="panel-heading">
+                <div class="panel-title pull-right"><a href="{{ route('faqs.create') }}"><i class="fa fa-plus"></i>Tambah</a>
+        </div>
               </div>
+
+              <br>
+              <br>
 
               <div class="panel-body">
                 <div class="table-responsive">
@@ -29,7 +33,7 @@
                       <tr>
                         <td>{{ $no++ }}</td>
                         <td>{{ $data->pertanyaan }}</td>
-                        <td>{{ $data->jawaban }}</td>
+                        <td>{!!$data->jawaban!!}</td>
                             <td><a class="btn btn-warning" href="{{ route('faqs.edit',$data->id) }}">Edit</a>
                         </td>
                         <td>

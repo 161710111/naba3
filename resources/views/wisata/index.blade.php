@@ -7,10 +7,14 @@
     <div class="container">
         <div class="col-md-12">
             <div class="panel panel-primary">
-              <div class="panel-heading">Umroh Reguler
-                <div class="panel-title pull-right"><a class="btn btn-warning" href="{{ route('wisata.create') }}">Tambah</a>
-                </div>
+              <center><h1><i style="font-size:25px;color:purple"> W I S A T A </i></h1></center>
+              <div class="panel-heading">
+                <div class="panel-title pull-right"><a href="{{ route('wisata.create') }}"><i class="fa fa-plus"></i>Tambah</a>
+        </div>
               </div>
+
+              <br>
+              <br>
 
               <div class="panel-body">
                 <div class="table-responsive">
@@ -21,11 +25,6 @@
                       
                       <th>Judul </th>
                       <th>isi </th>
-                      <th>foto </th>
-                      <th>lokasi </th>
-                      <th>harga </th>
-                      <th>hotel </th>
-                      <th>keterangan </th>
                       <th>kategori </th>
                       <th colspan="3">Action</th>
                     </tr>
@@ -36,12 +35,7 @@
                       <tr>
                         <td>{{ $no++ }}</td>
                         <td>{{ $data->judul }}</td>
-                        <td>{{ $data->isi }}</td>
-                        <td><img src="{{ asset('assets/admin/images/icon/'.$data->foto )}}" style="max-height:60px; max-width: 60px; margin-top: 6px;"></td>
-                        <td>{{ $data->lokasi }}</td>
-                        <td>{{ $data->harga }}</td>
-                        <td>{{ $data->hotel }}</td>
-                        <td>{{ $data->keterangan }}</td>
+                        <td>{!!$data->isi!!}</td>
                         <td>{{ $data->Kategoriw->nama_kategori }}</td>
                             <td><a class="btn btn-warning" href="{{ route('wisata.edit',$data->id) }}">Edit</a>
                         </td>

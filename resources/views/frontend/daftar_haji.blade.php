@@ -1,4 +1,4 @@
-extends('layouts.frontend')
+@extends('layouts.frontend')
 @section('content')
 
 	<!--POPUP-->
@@ -6,11 +6,12 @@ extends('layouts.frontend')
 	<br>
 	<br>
 	<br>
+	<div class="container-fluid">
     <section class="p-0">
     	<div class="title mb-50">
                 <h2>Form Pendaftaran Haji </h2>
               </div>
-	 <form action="{{ route('daftarhaji.store') }}" method="post" enctype="multipart/form-data" >
+	 <form action="{{ route('daftar_haji.storeHaji') }}" method="post" enctype="multipart/form-data" >
 			  		{{ csrf_field() }}
 
 			  		<div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">
@@ -179,5 +180,6 @@ extends('layouts.frontend')
 			  		</div>
 			  	</form>
     </section>
+</div>
 @endsection
 

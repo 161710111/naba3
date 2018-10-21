@@ -1,4 +1,4 @@
-extends('layouts.frontend')
+@extends('layouts.frontend')
 @section('content')
 
 	<!--POPUP-->
@@ -6,6 +6,7 @@ extends('layouts.frontend')
 	<br>
 	<br>
 	<br>
+	<div class="container-fluid">
     <section class="p-0">
     	<div class="title mb-50">
                 <h2>Form Pendaftaran Umroh </h2>
@@ -178,5 +179,6 @@ extends('layouts.frontend')
 			  		</div>
 			  	</form>
     </section>
+</div>
 @endsection
 

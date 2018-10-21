@@ -29,10 +29,10 @@ Route::get('daftar_umroh/create', 'FrontendController@index7')->name('daftar_umr
 Route::post('daftar_umroh', 'FrontendController@store')->name('daftar_umroh.store');
 
 Route::get('daftar_haji/create', 'FrontendController@index23')->name('daftar_haji');
-Route::post('daftar_haji', 'FrontendController@store')->name('daftar_haji.store');
+Route::post('daftar_haji', 'FrontendController@storeHaji')->name('daftar_haji.storeHaji');
 
 Route::get('daftar_tabungan/create', 'FrontendController@index24')->name('daftar_tabungan');
-Route::post('daftar_tabungan', 'FrontendController@store')->name('daftar_tabungan.store');
+Route::post('daftar_tabungan', 'FrontendController@storeTabungan')->name('daftar_tabungan.storeTabungan');
 
 Route::get('berita', 'FrontendController@berita')->name('berita');
 Route::get('detailberita/{berita}', 'FrontendController@show')->name('detailberita');

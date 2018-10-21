@@ -14,6 +14,8 @@ use App\Wisata;
 use App\Kategoriw;
 use App\Daftar;
 use App\Youtube;
+use App\Daftarhaji;
+use App\Daftartabungan;
 
 class FrontendController extends Controller
 {
@@ -170,7 +172,7 @@ class FrontendController extends Controller
 
     public function create()
     {
-        return view('frontend.daftar_umroh');
+        return view('frontend.daftar_umroh', 'daftar_tabungan', 'daftar_haji');
     }
 
     /**
@@ -231,19 +233,7 @@ class FrontendController extends Controller
         return redirect()->route('sukses.index');
     }
 
-
-    public function create()
-    {
-        return view('daftarhaji.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function storeHaji(Request $request)
     {
         $this->validate($request,[
             
@@ -292,22 +282,10 @@ class FrontendController extends Controller
         }
 
         $daftarhajis->save();
-        return redirect()->route('frontend.sukses');
+        return redirect()->route('sukses.index');
     }
 
-
-    public function create()
-    {
-        return view('daftartabungan.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function storeTabungan(Request $request)
     {
         $this->validate($request,[
             
@@ -323,6 +301,7 @@ class FrontendController extends Controller
             'rencana' => 'required|',
             'pendamping' => 'required|',
             'paket' => 'required|',
+            'jumlahwaktu' => 'required|',
             'jumlahsetoran' => 'required|',
             'setoran' => 'required|'
             
@@ -333,7 +312,6 @@ class FrontendController extends Controller
         $daftartabungans->tempatlahir = $request->tempatlahir;
         $daftartabungans->tgllahir = $request->tgllahir;
         $daftartabungans->jk = $request->jk;
-        $daftartabungans->foto = $request->foto;
         $daftartabungans->tanda = $request->tanda;
         $daftartabungans->notanda = $request->notanda;
         $daftartabungans->alamatsesuai = $request->alamatsesuai;
@@ -342,12 +320,13 @@ class FrontendController extends Controller
         $daftartabungans->rencana = $request->rencana;
         $daftartabungans->pendamping = $request->pendamping;
         $daftartabungans->paket = $request->paket;
+        $daftartabungans->jumlahwaktu = $request->jumlahwaktu;
         $daftartabungans->jumlahsetoran = $request->jumlahsetoran;
         $daftartabungans->setoran = $request->setoran;
         
 
         $daftartabungans->save();
-        return redirect()->route('frontend.sukses');
+        return redirect()->route('sukses.index');
     }
 }
 

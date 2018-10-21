@@ -106,7 +106,7 @@
                         
 
                         <li>
-                            <a href="{{ route('daftarhaji.index') }}">
+                            <a href="{{ route('daftartabungan.index') }}">
                                 <i class="fa fa-download" style="font-size:25px;color:purple"></i>Daftar Tabungan</a>
                         </li>
 

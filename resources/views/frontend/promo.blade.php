@@ -42,10 +42,12 @@
     <div class="row">
       @foreach($promos as $data)
       <div class="col-sm-4">
-       <img src="{{ asset('assets/admin/images/icon/'.$data->foto )}}" style="max-height:380px; max-width: 400px; margin-top: 6px;"></div>
-    @endforeach
-    </div>
-    
+        
+       <img src="{{ asset('assets/admin/images/icon/'.$data->foto )}}" style="height:230px; width: 550px; margin-top: 6px;">
+
+     </div>
+     @endforeach 
+    </div> 
   </div>
 </section>
     @endsection

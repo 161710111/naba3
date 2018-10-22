@@ -10,7 +10,40 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         
-                        
+                       <li>
+                            <a href="{{ route('galmanumroh.index') }}">
+                                <i class="fa fa-image" style="font-size:25px;color:purple"></i>Galeri Manasik Umrah</a>
+                        </li> 
+
+                        <li>
+                            <a href="{{ route('galerihome.index') }}">
+                                <i class="fa fa-image" style="font-size:25px;color:purple"></i>Galeri Home</a>
+                        </li> 
+
+                        <li>
+                            <a href="{{ route('galerihaji.index') }}">
+                                <i class="fa fa-image" style="font-size:25px;color:purple"></i>Galeri Haji</a>
+                        </li> 
+
+                        <li>
+                            <a href="{{ route('galeriwisata.index') }}">
+                                <i class="fa fa-image" style="font-size:25px;color:purple"></i>Galeri wisata</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('galmanhaji.index') }}">
+                                <i class="fa fa-image" style="font-size:25px;color:purple"></i>Galeri Manasik Haji</a>
+                        </li>  
+
+                        <li>
+                            <a href="{{ route('galumplus.index') }}">
+                                <i class="fa fa-image" style="font-size:25px;color:purple"></i>Galeri Umrah Plus</a>
+                        </li> 
+
+                        <li>
+                            <a href="{{ route('galumreguler.index') }}">
+                                <i class="fa fa-image" style="font-size:25px;color:purple"></i>Galeri Umroh Reguler</a>
+                        </li> 
                         
 
                         <li>
@@ -19,15 +52,7 @@
                         </li>
 
 
-                        <li>
-                            <a href="{{ route('kategorig.index') }}">
-                                <i class="fa fa-tasks" style="font-size:25px;color:purple"></i></i>Kategori Galeri</a>
-                        </li>
-
-                        <li>
-                            <a href="{{ route('galeri.index') }}">
-                                <i class="fa fa-image" style="font-size:25px;color:purple"></i>Galeri</a>
-                        </li>
+                        
 
                         <li>
                             <a href="{{ route('promo.index') }}">
@@ -112,7 +137,7 @@
 
 
                         <li>
-                            <a href="{{ route('daftartabungan.index') }}">
+                            <a href="{{ route('tabungan.index') }}">
                                 <i class="fa fa-credit-card" style="font-size:25px;color:purple"></i>Tabungan Umrah</a>
                         </li>
                         <li>

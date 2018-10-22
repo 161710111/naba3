@@ -4791,6 +4791,12 @@ form.register {
   z-index: 0;
   -webkit-backface-visibility: hidden;
 }
+
+.card-post .post-bodyy {
+  padding: 30px;
+  background-color: purple;
+}
+
 .card-post .post-body {
   padding: 30px;
   background-color: #fff;

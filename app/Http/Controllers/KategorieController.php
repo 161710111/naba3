@@ -38,12 +38,12 @@ class KategorieController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'nama_kategori' => 'required|',
-            'keterangan' => 'required|'
+            'nama_kategori' => 'required|'
+            
         ]);
         $kategories = new Kategorie;
         $kategories->nama_kategori = $request->nama_kategori;
-        $kategories->keterangan = $request->keterangan;
+        
         $kategories->slug = str_slug($request->nama_kategori, '-');
         $kategories->save();
         return redirect()->route('kategorie.index');
@@ -82,13 +82,12 @@ class KategorieController extends Controller
     public function update(Request $request, Kategorie $kategorie)
     {
         $this->validate($request,[
-            'nama_kategori' => 'required|',
-            'keterangan' => 'required|'
-
+            'nama_kategori' => 'required|'
+           
         ]);
         $kategories = Kategorie::findOrFail($id);
         $kategories->nama_kategori = $request->nama_kategori;
-        $kategories->keterangan = $request->keterangan;
+        
         $kategories->save();
         return redirect()->route('kategorie.index');
     }

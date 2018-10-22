@@ -58,13 +58,13 @@
 
 			  		<div class="form-group {{ $errors->has('tanda') ? ' has-error' : '' }}">
 			  			<label class="control-label">tanda</label>	
-			  			<input type="file" id="tanda" name="tanda" class="validate" accept="image/*" required>
+			  			<input type="text" name="tanda" class="form-control"  required>
 			  			@if ($errors->has('tanda'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('tanda') }}</strong>
                             </span>
                         @endif
-					</div>
+			  		</div>
 
 			  		<div class="form-group {{ $errors->has('notanda') ? ' has-error' : '' }}">
 			  			<label class="control-label">notanda</label>	
@@ -168,15 +168,7 @@
                         @endif
 			  		</div>
 
-			  		<div class="form-group {{ $errors->has('keterangan') ? ' has-error' : '' }}">
-			  			<label class="control-label">keterangan</label>	
-			  			<input type="text" name="keterangan" class="form-control"  required>
-			  			@if ($errors->has('keterangan'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('keterangan') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
+			  		
 
 
 			  		<div class="form-group">

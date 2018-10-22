@@ -28,7 +28,7 @@
                       <tr>
                         <td>{{ $no++ }}</td>
                         <td><img src="{{ asset('assets/admin/images/icon/'.$data->logo )}}" style="max-height:60px; max-width: 60px; margin-top: 6px;"></td>
-                        <td>{{ $data->Kategorig->nama }}</td>
+                        
                             <td><a class="btn btn-warning" href="{{ route('galerihome.edit',$data->id) }}">Edit</a>
                         </td>
                         <td>

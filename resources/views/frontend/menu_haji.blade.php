@@ -135,9 +135,5 @@
 					</div>
 	</section>
 		
-	<section>
-		<div class="container text-right">    
-			<a class="btn btn-primary" href="{{ route('daftar_umroh') }}">Daftar sekarang</a>
-        </div>
-    </section>
+	
      @endsection

@@ -16,13 +16,12 @@
               <br>
               <br>
 
-              <div class="panel-body">
+              <div class="panel-body" style="color:black">
                 <div class="table-responsive">
                   <table class="table">
                     <thead>
                     <tr>
                       <th>No</th>
-                      
                       <th>Nama </th>
                       <th>Tempat Lahir </th>
                       <th>Tanggal Lahir </th>
@@ -31,7 +30,6 @@
                       <th>No.Tanda Pengenal </th>
                       <th>Alamat sesuai </th>
                       <th>Alamat surat-menyurat </th>
-                      <th>No.Telepon/Hp </th>
                       <th>Email</th>
                       <th>Rencana Umroh Bersama </th>
                       <th>Nama Pendamping </th>

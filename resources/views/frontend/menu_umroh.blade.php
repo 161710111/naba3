@@ -128,45 +128,22 @@
 		          </ul>
       </div>
     </section>
-				<section>
-          
+				
+  @php
+      $umrohs = App\Umroh::all();
+      @endphp        
 <section>
-  <div class="container">
-    <div class="title center">
-      <br />
-      <h2 style="color:#702c8d;">
-        Pricelist</h2>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <a href="http://nabatour.com/index/detail_umrah/3"><img alt="Paket Gold Nabatour" src="http://nabatour.com/images/harga/gold.jpg" title="Paket Gold Nabatour" width="100%" /></a></div>
-      <div class="col-sm-4">
-        <a href="http://nabatour.com/index/detail_umrah/2"><img alt="Paket Silver Nabatour" src="http://nabatour.com/images/harga/silver.jpg" title="Paket Silver Nabatour" width="100%" /></a></div>
-      <div class="col-sm-4">
-        <a href="http://nabatour.com/index/detail_umrah/1"><img alt="Paket Bronze Nabatour" src="http://nabatour.com/images/harga/bronze.jpg" title="Paket Bronze Nabatour" width="100%" /></a></div>
-    </div>
+         @foreach($umrohs as $data)
+  <div class="title center">
+    <h2 style="color:#702c8d;">
+      <span style="font-size:32px;">{{$data->judul}}</span></h2>
   </div>
-</section>          
-
-<section>
   <div class="container">
-    <div class="title center">
-      <br />
-      <h2 style="color:#702c8d;">
-        Pricelist</h2>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <a href="http://nabatour.com/index/detail_umrah/4"><img alt="Paket Umrah + Istanbul" src="http://nabatour.com/images/harga/istanbul.jpg" title="Paket Umrah + Istanbul" width="100%" /></a></div>
-      <div class="col-sm-4">
-        <a href="http://nabatour.com/index/detail_umrah/5"><img alt="Paket Umrah Plus Bursa + Istanbul" src="http://nabatour.com/images/harga/bursa_istanbul.jpg" title="Paket Umrah Plus Bursa + Istanbul" width="100%" /></a></div>
-      <div class="col-sm-4">
-        <a href="http://nabatour.com/index/detail_umrah/6"><img alt="Umrah Plus Dubai + Abudhabi" src="http://nabatour.com/images/harga/dubai_abudhabi.jpg" title="Umrah Plus Dubai + Abudhabi" width="100%" /></a></div>
-    </div>
+    <p style="margin-left:21.3pt;">
+      {!! $data->isi !!}</p>
   </div>
+  @endforeach
 </section>
-
-
 
   @php
       $tabungans = App\tabungan::all();
@@ -206,9 +183,5 @@
 </section>
       
   
-  <section>
-    <div class="btn-container text-right">    
-      <a class="btn btn-primary" href="index/daftar_umrah.html">Daftar sekarang</a>
-        </div>
-    </section>
+  
     @endsection

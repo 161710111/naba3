@@ -34,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
             // $category = \App\Category::all();
             $recent = \App\Wisata::orderBy('created_at', 'desc')->take(4)->get();
             $view->with(compact('kategoriw', 'recent'));
+
         });
 
         

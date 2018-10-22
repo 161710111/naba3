@@ -43,17 +43,17 @@
             @foreach($jadwalhajis as $data)
                   <div class="col-md-4">
              
-              <article class="card-post">
+              <article class="card-post" style="color:#fff">
                 <div class="post-media masonry-media">
                 </div>
-                <div class="post-body">
+                <div class="post-bodyy" >
                   <div class="col-md-12">
                  <div class="title center">
-              <h2>{{ $data->bulan }}</h2>
+              <h2 style="color:#fff">{{ $data->bulan }}</h2>
             </div>
             </div>
                   <p>
-                    <p><p style="box-sizing: border-box; margin: 0px 0px 20px; line-height: 1.6; font-family: NexaLight; color: rgb(122, 122, 122); font-size: 17px;">{!!$data->keterangan!!}</p>
+                    <p ><p style="box-sizing: border-box; margin: 0px 0px 20px; line-height: 1.6; font-family: NexaLight; color: rgb(122, 122, 122); font-size: 17px;">{!!$data->keterangan!!}</p>
           </p>
                   
                 </div>

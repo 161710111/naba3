@@ -16,8 +16,8 @@
               <br>
               <br>
 
-              <div class="panel-body">
-                <div class="table-responsive">
+              <div class="panel-body" style="color:black">
+                <div class="table-responsive" >
                   <table class="table">
                     <thead>
                     <tr>

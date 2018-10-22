@@ -158,52 +158,19 @@
       </div>
     </section>
     
-    <section class="white-bg">
-      
-      <div class="container">
-        <div class="row">
-          <div class="blog-grid-wrapper">
-             
-      <div class="col-md-12">
-        <div class="title center">
-          <h2 style="color:#702c8d;">
-          <span style="font-size:32px;"></span></h2>
-        </div>
-        <p></p>
-      </div>  
-        
-
-
-            <div class="grid-post">
-              
-              <article>
-                
-                <a href="index/tours_detail/1.html">
-                  <div class="post-featured-image">
-                    
-                  <div class="grid-post-content">
-                    <div class="centrize">
-                      <div class="v-center">
-                        <h4></h4>
-            <h4></h4>
-            <p class="grid-post-info"><span class="grid-post-author"><b></b></span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                
-              </article>
-            </div>
-      
-          </div>
-        </div>
-      </div>
-						
-		
-      
-          </div>
-        </div>
-      </div>
-    </section>
+    @php
+      $wisatas = App\Wisata::all();
+      @endphp        
+<section>
+         @foreach($wisatas as $data)
+  <div class="title center">
+    <h2 style="color:#702c8d;">
+      <span style="font-size:32px;">{{$data->judul}}</span></h2>
+  </div>
+  <div class="container">
+    <p style="margin-left:21.3pt;">
+      {!! $data->isi !!}</p>
+  </div>
+  @endforeach
+</section>
      @endsection

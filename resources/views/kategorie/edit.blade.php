@@ -22,15 +22,7 @@
                         @endif
 			  		</div>
 
-			  		<div class="form-group {{ $errors->has('keterangan') ? ' has-error' : '' }}">
-			  			<label class="control-label">Keterangan</label>	
-			  			<textarea  name="keterangan" value="{{ $kategories->keterangan }}" class="form-control" required></textarea>
-			  			@if ($errors->has('keterangan'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('keterangan') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
+			  		
 
 			  		<div class="form-group">
 			  			<button type="submit" class="btn btn-primary">Simpan</button>

@@ -16,7 +16,7 @@
 			<br>
               <br>
 
-	<div class="table-responsive">
+	<div class="table-responsive" style="color:black">
 		<table class="table">
 			<thead>
 				<tr>

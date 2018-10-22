@@ -60,7 +60,7 @@
             <a href="{{ route('menu_wisata') }}"><div class="ib-icon"><i class="fa fa-map"></i>
             </div></a>
             <div class="ib-content">
-              <a href="{{ route('menu_wisata') }}" data-toggle="modal" data-target="#myModal"><h4>Wisata Muslim</h4></a>
+              <a href="{{ route('menu_wisata') }}"><h4>Wisata Muslim</h4></a>
             </div>
           </div>
         </div>
@@ -77,9 +77,9 @@
 				</div>
 				<!-- body modal -->
 				<div class="modal-body">
-					<p><a href="menu_umrah.html"><i class="fa fa-cube"></i> Paket Umrah</a></p>
-					<p><a href="menu_haji.html"><i class="fa fa-cube"></i> KBIH</a></p>
-					<p><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-file"></i> Form Pendaftaran</a></p>
+					<p><a href="{{ route('menu_umroh') }}"><i class="fa fa-cube"></i> Paket Umrah</a></p>
+					<p><a href="{{ route('menu_haji') }}"><i class="fa fa-cube"></i> KBIH</a></p>
+					
 				</div>
 			</div>
 		</div>
@@ -112,6 +112,7 @@ Selain menyediakan paket umroh dan tour muslim sebagai bentuk layanan yang terse
       </div>
     </section>
 	
+
 
 
 	<section class="white-bg">

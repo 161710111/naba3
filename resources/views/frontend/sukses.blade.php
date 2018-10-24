@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PROMO NABATOUR</title>
+    <title>SUKSES</title>
     @extends('layouts.frontend')
     @section('content')
     <!--POPUP-->

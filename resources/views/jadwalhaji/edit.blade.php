@@ -38,7 +38,7 @@
         			{{ csrf_field() }}
 			  		<div class="form-group {{ $errors->has('bulan') ? ' has-error' : '' }}">
 			  			<label class="control-label">Nama Bulan</label>	
-			  			<input type="text" value="{{ $jadwalhajis->bulan }}" name="nama" class="form-control"  required>
+			  			<input type="text" value="{{ $jadwalhajis->bulan }}" name="bulan" class="form-control"  required>
 			  			@if ($errors->has('bulan'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('bulan') }}</strong>
@@ -48,7 +48,7 @@
 
 			  		<div class="form-group {{ $errors->has('keterangan') ? ' has-error' : '' }}">
 			  			<label class="control-label">Keterangan</label>	
-			  			<textarea  name="keterangan" value="{{ $jadwalhajis->keterangan }}" class="form-control" required></textarea>
+			  			<textarea  name="keterangan" class="form-control" required>{{ $jadwalhajis->keterangan }}</textarea>
 			  			@if ($errors->has('keterangan'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('keterangan') }}</strong>

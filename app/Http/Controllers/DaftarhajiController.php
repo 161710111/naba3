@@ -161,7 +161,7 @@ class DaftarhajiController extends Controller
             $destinationPath = public_path() . DIRECTORY_SEPARATOR . '/assets/admin/images/icon/';
             $uploaded_logo->move($destinationPath, $filename);
     
-     $testimonis->foto=$filename;
+     $daftarhajis->foto=$filename;
     }
 
         $daftarhajis->save();
@@ -177,7 +177,7 @@ class DaftarhajiController extends Controller
      */
     public function destroy($id)
     {
-        $daftarhajis = Daftar::findOrFail($id);
+        $daftarhajis = Daftarhaji::findOrFail($id);
          $daftarhajis->delete();
         return redirect()->route('daftarhaji.index');
     }

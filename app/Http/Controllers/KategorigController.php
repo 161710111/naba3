@@ -62,7 +62,7 @@ class KategorigController extends Controller
      * @param  \App\Kategorie  $kategorie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kategorig $kategorig)
+    public function edit($id)
     {
         $kategorigs = Kategorig::findOrFail($id);
         return view('kategorig.edit',compact('kategorigs'));
@@ -93,7 +93,7 @@ class KategorigController extends Controller
      * @param  \App\Kategorie  $kategorie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kategorig $kategorig)
+    public function destroy($id)
     {
         $kategorigs = Kategorig::findOrFail($id);
          $kategorigs->delete();

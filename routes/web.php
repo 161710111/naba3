@@ -16,7 +16,7 @@ Route::get('welcome', function () {
 });
 
 Auth::routes();
-Route::get('/', 'FrontendController@home')->name('home');
+Route::get('/', 'FrontendController@home')->name('homes');
 Route::get('profile', 'FrontendController@index1')->name('profile');
 Route::get('umroh', 'FrontendController@index2')->name('umroh');
 Route::get('wisata', 'FrontendController@index4')->name('wisata');
@@ -46,10 +46,11 @@ Route::get('jadwal_manasik', 'FrontendController@index17')->name('jadwal_manasik
 Route::get('menu_umroh', 'FrontendController@index19')->name('menu_umroh');
 Route::get('menu_haji', 'FrontendController@index20')->name('menu_haji');
 Route::get('menu_wisata', 'FrontendController@index21')->name('menu_wisata');
-Route::get('umroh/kategori/{kategori}', 'FrontendController@umrahkategori');
-Route::get('haji/kategoria/{kategoria}', 'FrontendController@hajikategori');\
-Route::get('wisata/kategoriw/{kategoriw}', 'FrontendController@wisatakategori');
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('umroh/{kategori}', 'FrontendController@umrahkategori');
+Route::get('haji/{kategoria}', 'FrontendController@hajikategori');\
+Route::get('wisata/{kategoriw}', 'FrontendController@wisatakategori');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('logout','\App\Http\Controller\Auth\LoginController@logout');
 
 Route::group(['prefix'=>'admin', 'middleware'=>['auth','role:admin']],function(){
 	Route::resource('berita','BeritaController');

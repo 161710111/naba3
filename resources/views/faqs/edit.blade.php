@@ -1,8 +1,5 @@
 @extends('layouts.admin')
 @section('content')
-<br>
-<br>
-<br>
 
 <script src="{{ asset('assets/tinymce/js/tinymce/tinymce.js') }}"></script>
 <script type="text/javascript">
@@ -49,7 +46,7 @@
 
 			  		<div class="form-group {{ $errors->has('jawaban') ? ' has-error' : '' }}">
 			  			<label class="control-label">jawaban</label>	
-			  			<textarea  name="jawaban" value="{{ $faqs->jawaban }}" class="form-control" required></textarea>
+			  			<textarea  name="jawaban"  class="form-control" required>{{ $faqs->jawaban }}</textarea>
 			  			@if ($errors->has('jawaban'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('jawaban') }}</strong>

@@ -1,8 +1,5 @@
 @extends('layouts.admin')
 @section('content')
-<br>
-<br>
-<br>
 
 <script src="{{ asset('assets/tinymce/js/tinymce/tinymce.js') }}"></script>
 <script type="text/javascript">
@@ -51,7 +48,7 @@
 
 			  		<div class="form-group {{ $errors->has('keterangan') ? ' has-error' : '' }}">
 			  			<label class="control-label">Keterangan</label>	
-			  			<textarea  name="keterangan" value="{{ $tabungans->keterangan }}" class="form-control" required></textarea>
+			  			<textarea  name="keterangan"  class="form-control" required>{{ $tabungans->keterangan }}</textarea>
 			  			@if ($errors->has('keterangan'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('keterangan') }}</strong>
@@ -61,7 +58,7 @@
 
 			  		<div class="form-group {{ $errors->has('keunggulan') ? ' has-error' : '' }}">
 			  			<label class="control-label">keunggulan</label>	
-			  			<textarea  name="keunggulan" value="{{ $tabungans->keunggulan }}" class="form-control" required></textarea>
+			  			<textarea  name="keunggulan" class="form-control" required>{{ $tabungans->keunggulan }}</textarea>
 			  			@if ($errors->has('keunggulan'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('keunggulan') }}</strong>
@@ -71,7 +68,7 @@
 
 			  		<div class="form-group {{ $errors->has('syarat') ? ' has-error' : '' }}">
 			  			<label class="control-label">syarat</label>	
-			  			<textarea  name="syarat" value="{{ $tabungans->syarat }}" class="form-control" required></textarea>
+			  			<textarea  name="syarat"  class="form-control" required>{{ $tabungans->syarat }}</textarea>
 			  			@if ($errors->has('syarat'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('syarat') }}</strong>
@@ -79,6 +76,9 @@
                         @endif
 			  		</div>
 
+			  		@if (isset($tabungans)&& $tabungans->logo)
+        			<img src="{{ asset('assets/admin/images/icon/'.$tabungans->logo )}}" style="max-height:100px; max-width: 150px; margin-top: 6px;">
+        			@endif
 			  		<div class="form-group {{ $errors->has('logo') ? ' has-error' : '' }}">
 			  			<label class="control-label">Logo</label>
 			  			<input type="file" name="logo" class="form-control" value="{{ $tabungans->logo }}"  required>
@@ -92,7 +92,7 @@
 
 			  		<div class="form-group {{ $errors->has('note') ? ' has-error' : '' }}">
 			  			<label class="control-label">note</label>	
-			  			<textarea  name="note" value="{{ $tabungans->note }}" class="form-control" required></textarea>
+			  			<textarea  name="note"  class="form-control" required>{{ $tabungans->note }}</textarea>
 			  			@if ($errors->has('note'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('note') }}</strong>

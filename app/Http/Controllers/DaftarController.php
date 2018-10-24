@@ -162,7 +162,7 @@ class DaftarController extends Controller
             $destinationPath = public_path() . DIRECTORY_SEPARATOR . '/assets/admin/images/icon/';
             $uploaded_logo->move($destinationPath, $filename);
     
-     $testimonis->foto=$filename;
+     $daftars->foto=$filename;
     }
 
         $daftars->save();

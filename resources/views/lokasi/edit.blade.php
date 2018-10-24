@@ -28,7 +28,7 @@
   <div class="container">
     <div class="col-md-12">
       <div class="panel panel-primary">
-        <div class="panel-heading">Edit umroh
+        <div class="panel-heading">Edit Lokasi
           <div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
           </div>
         </div>
@@ -36,7 +36,9 @@
           <form action="{{ route('lokasi.update',$lokasis->id) }}" method="post" enctype="multipart/form-data" >
             <input name="_method" type="hidden" value="PATCH">
               {{ csrf_field() }}
-          
+          @if (isset($lokasis)&& $lokasis->foto)
+              <img src="{{ asset('assets/admin/images/icon/'.$lokasis->foto )}}" style="max-height:100px; max-width: 150px; margin-top: 6px;">
+              @endif
 
             <div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">
               <label class="control-label">foto</label>
@@ -60,7 +62,7 @@
 
             <div class="form-group {{ $errors->has('harga') ? ' has-error' : '' }}">
               <label class="control-label">harga</label>  
-              <input type="text" value="{{ $lokasis->harga }}" name="nama" class="form-control"  required>
+              <input type="text" value="{{ $lokasis->harga }}" name="harga" class="form-control"  required>
               @if ($errors->has('harga'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('harga') }}</strong>
@@ -70,7 +72,7 @@
 
             <div class="form-group {{ $errors->has('hotel') ? ' has-error' : '' }}">
               <label class="control-label">hotel</label>  
-              <input type="text" value="{{ $lokasis->hotel }}" name="nama" class="form-control"  required>
+              <input type="text" value="{{ $lokasis->hotel }}" name="hotel" class="form-control"  required>
               @if ($errors->has('hotel'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('hotel') }}</strong>
@@ -80,7 +82,7 @@
 
             <div class="form-group {{ $errors->has('keterangan') ? ' has-error' : '' }}">
               <label class="control-label">keterangan</label> 
-              <textarea  name="isi" value="{{ $lokasis->isi }}" class="form-control" required></textarea>
+              <textarea  name="keterangan"  class="form-control" required>{{ $lokasis->keterangan }}</textarea>
               @if ($errors->has('keterangan'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('keterangan') }}</strong>

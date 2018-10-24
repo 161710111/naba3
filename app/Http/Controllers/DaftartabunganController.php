@@ -123,8 +123,8 @@ class DaftartabunganController extends Controller
             'pendamping' => 'required|',
             'paket' => 'required|',
             'jumlahsetoran' => 'required|',
-            'setoran' => 'required|',
-            'keterangan' => 'required|'
+            'setoran' => 'required|'
+            
             
         ]);
         $daftartabungans = Daftartabungan::findOrFail($id);
@@ -132,7 +132,6 @@ class DaftartabunganController extends Controller
         $daftartabungans->tempatlahir = $request->tempatlahir;
         $daftartabungans->tgllahir = $request->tgllahir;
         $daftartabungans->jk = $request->jk;
-        $daftartabungans->foto = $request->foto;
         $daftartabungans->tanda = $request->tanda;
         $daftartabungans->notanda = $request->notanda;
         $daftartabungans->alamatsesuai = $request->alamatsesuai;

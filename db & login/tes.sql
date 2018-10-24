@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 22, 2018 at 01:25 PM
+-- Generation Time: Oct 24, 2018 at 10:45 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -44,7 +44,7 @@ CREATE TABLE `beritas` (
 --
 
 INSERT INTO `beritas` (`id`, `foto`, `judul`, `isi`, `slug`, `kategori_id`, `created_at`, `updated_at`) VALUES
-(1, '3cb4112f42cfab30e0749d5939a400eb.jpg', 'Jemaah Umrah Diperkirakan Akan Membludak Di 10 Hari Terakhir Ramadan', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Sekitar 6 juta jamaah tercatat melakukan ibadah Umroh di bulan Ramadan kali ini, berdasarkan data statistik dari the Information Center Kementrian Haji dan Umrah Arab Saudi, seperti dilaporkan the Saudi Press Agency.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 20px; line-height: 1.6; font-family: NexaLight; color: #7a7a7a; font-size: 17px;\">Jumlah ini diperkirakan akan terus meningkat dan memuncak pada 10 terakhir Ramadan. Bulan Ramadan memang kerap dimanfaatkan umat Muslim dengan memaksimalkan ibadah, salah satunya adalah melaksanakan ibadah umroh sebelum ibadah haji di musim haji yang datang setelah Ramadan.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; line-height: 1.6; font-family: NexaLight; color: #7a7a7a; font-size: 17px;\">&ldquo;Jumlah jamaah umrah akan melebihi 6 juta di beberapa hari mendatang. Pihak kementerian juga sudah berkoordinasi dengan agensi agar kegiatan ibadah umrah tetap nyaman dan mudah meski jamaah membludak,&rdquo; ucap juru bicara dalam press statement. Ia juga menambahkan, sejauh ini ada 43.000 layanan disediakan untuk jamaah umrah.</p>\r\n</body>\r\n</html>', 'jemaah-umrah-diperkirakan-akan-membludak-di-10-hari-terakhir-ramadan', 1, '2018-10-22 01:22:45', '2018-10-22 03:07:48'),
+(1, '421f74a7e469ea4e89a323085add6aa6.jpg', 'Jemaah Umrah Diperkirakan Akan Membludak Di 10 Hari Terakhir Ramadan.', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Sekitar 6 juta jamaah tercatat melakukan ibadah Umroh di bulan Ramadan kali ini, berdasarkan data statistik dari the Information Center Kementrian Haji dan Umrah Arab Saudi, seperti dilaporkan the Saudi Press Agency.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 20px; line-height: 1.6; font-family: NexaLight; color: #7a7a7a; font-size: 17px;\">Jumlah ini diperkirakan akan terus meningkat dan memuncak pada 10 terakhir Ramadan. Bulan Ramadan memang kerap dimanfaatkan umat Muslim dengan memaksimalkan ibadah, salah satunya adalah melaksanakan ibadah umroh sebelum ibadah haji di musim haji yang datang setelah Ramadan.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; line-height: 1.6; font-family: NexaLight; color: #7a7a7a; font-size: 17px;\">&ldquo;Jumlah jamaah umrah akan melebihi 6 juta di beberapa hari mendatang. Pihak kementerian juga sudah berkoordinasi dengan agensi agar kegiatan ibadah umrah tetap nyaman dan mudah meski jamaah membludak,&rdquo; ucap juru bicara dalam press statement. Ia juga menambahkan, sejauh ini ada 43.000 layanan disediakan untuk jamaah umrah</p>\r\n</body>\r\n</html>', 'jemaah-umrah-diperkirakan-akan-membludak-di-10-hari-terakhir-ramadan', 1, '2018-10-22 01:22:45', '2018-10-23 23:23:15'),
 (2, 'YZkxqr_2.jpg', 'Kedatangan Jamaah Umrah Tahun Depan Diproyeksikan Mencapai 8 Juta Jiwa', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Ahmad Sheikh Bafaqih, pakar di bidang ekonomi Haji dan Umrah, mengatakan jumlah jamaah umrah terdaftar meningkat dibanding angka tahun lalu.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 20px; line-height: 1.6; font-family: NexaLight; color: #7a7a7a; font-size: 17px;\">Dia mengharapkan kedatangan 8 juta jamaah umrah tahun depan, setelah sebagian pembangunan di Masjidil Haram dan Masjid Nabawi selesai. Diharapkan jumlah jamaah meningkat 2 juta jamaah umrah dibandingkan dengan 6 juta peziarah tahun ini, diperkirakan meningkat 30 persen.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 20px; line-height: 1.6; font-family: NexaLight; color: #7a7a7a; font-size: 17px;\">Dia menekankan pada upaya bersama dari Kementerian Dalam Negeri, haji dan umrah, dan otoritas terkait untuk memenuhi kebutuhan dan keinginan sebagian besar peziarah yang melakukan umrah selama Ramadhan terakhir ini di Makkah.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 20px; line-height: 1.6; font-family: NexaLight; color: #7a7a7a; font-size: 17px;\">Sementara itu, sumber-sumber informasi mengatakan, Kementerian Haji dan Umrah menghentikan penerbitan visa umrah tanpa batas untuk musim tahun ini sejak 16 Ramadhan. Sumber tersebut mengatakan bahwa musim umrah tahun ini menunjukkan peningkatan 6,99 persen dari tahun lalu dengan 6.393.464 visa dikeluarkan, meningkat dari 444.252 visa, sementara jumlah peziarah mencapai 5.949.212 jamaah umrah.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; line-height: 1.6; font-family: NexaLight; color: #7a7a7a; font-size: 17px;\">Menurut statistik, Mesir datang pertama dengan 1.303.067 visa umrah, naik 17 persen dari musim Umrah lalu; Pakistan dengan 991.337 visa umrah dan Indonesia di posisi ketiga dengan 699.612 visa umrah.</p>\r\n</body>\r\n</html>', 'kedatangan-jamaah-umrah-tahun-depan-diproyeksikan-mencapai-8-juta-jiwa', 1, '2018-10-22 03:09:13', '2018-10-22 03:09:13');
 
 -- --------------------------------------------------------
@@ -103,6 +103,13 @@ CREATE TABLE `daftars` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `daftars`
+--
+
+INSERT INTO `daftars` (`id`, `foto`, `paket`, `paspor`, `nama`, `tempatlahir`, `tgllahir`, `jk`, `alamat`, `notelp`, `status`, `pekerjaan`, `jabatan`, `almkantor`, `notelpkantor`, `email`, `keterangan`, `created_at`, `updated_at`) VALUES
+(1, 'a903dea5ac1ac4300e9bf78e6acbb409.jpg', 'umrah reguler', '1241244', 'Dianny', 'bandung', '2018-10-09', 'Perempuan', 'jl.jggq', '86986986', 'Menikah', 'wiraswasta', 'karyawan', 'jl.hfyfye', '7657651', 'dikafadlan7601@gmail.com', 'iyahh', '2018-10-23 20:07:15', '2018-10-23 23:46:05');
+
 -- --------------------------------------------------------
 
 --
@@ -135,7 +142,7 @@ CREATE TABLE `daftartabungans` (
 --
 
 INSERT INTO `daftartabungans` (`id`, `nama`, `tempatlahir`, `tgllahir`, `jk`, `tanda`, `notanda`, `alamatsesuai`, `alamatsurat`, `email`, `rencana`, `pendamping`, `paket`, `jumlahwaktu`, `jumlahsetoran`, `setoran`, `created_at`, `updated_at`) VALUES
-(2, 'aa', 'bandung', '2018-10-10', 'laki', 'ktp', '121324', 'aya', 'ieu', 'dikafadlan7601@gmail.com', 'sok', 'ada', 'umrah reguler', '2jam', '1000', 'heeh', '2018-10-21 08:59:02', '2018-10-21 08:59:02');
+(3, 'Dika', 'bandungd', '2018-10-29', 'Laki-laki', 'KTP', '121324', 'jl.kkkk', 'jl.ooooe', 'dikafadlan7601@gmail.com', 'Anak', 'ada', 'umrah reguler', '2jam', '1000', 'Tunai', '2018-10-24 00:10:44', '2018-10-24 00:33:56');
 
 -- --------------------------------------------------------
 
@@ -156,7 +163,7 @@ CREATE TABLE `faqs` (
 --
 
 INSERT INTO `faqs` (`id`, `pertanyaan`, `jawaban`, `created_at`, `updated_at`) VALUES
-(1, 'Apa itu nabatour.com ?', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Nabatour.com adalah official website dari Nur Assalaam Buana Tour &amp; Travel yang bergerak di bidang biro perjalanan Haji &amp; Umrah dengan fasilitas one stop service.</p>\r\n</body>\r\n</html>', '2018-10-22 03:27:53', '2018-10-22 03:27:53'),
+(1, 'Apa itu nabatour.com ?', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Nabatour.com adalah official website dari Nur Assalaam Buana Tour &amp; Travel yang bergerak di bidang biro perjalanan Haji &amp; Umrah dengan fasilitas one stop service</p>\r\n</body>\r\n</html>', '2018-10-22 03:27:53', '2018-10-23 23:23:41'),
 (2, 'Apa saja yang tersedia di nabatour.com ?', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<div class=\"accordion-content\" style=\"display: block;\">\r\n<p>Customer dapat mencari informasi mengenai paket perjalanan, syarat &amp; ketentuan, tips ataupun artikel sampai mengisi formulir untuk Umrah &amp; Haji.</p>\r\n<p>Customer dapat langsung melakukan komunikasi melalui fasilitas live chat kami dengan tim customer service Nabatour.</p>\r\n</div>\r\n</body>\r\n</html>', '2018-10-22 03:28:37', '2018-10-22 03:28:37'),
 (3, 'Apa kelebihan Naba Tour ?', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<div class=\"accordion-content\" style=\"display: block;\">\r\n<p><span style=\"font-weight: bold; font-family: Nexa; font-size: 15px;\">Aman</span></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; line-height: 1.6; font-family: Nexa; color: #ffffff; font-size: 15px;\"><span style=\"color: #000000;\">Bimbingan sebelum , pada saat dan pasca ibadah Haji &amp; Umroh dengan pembimbing yang professional dan mendalami bidang Fiqih Islam</span></p>\r\n<p><strong>Nyaman</strong></p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>Berangkat dan pulang dari Masjid Assalaam</li>\r\n<li>Jadwal jemaah yang terprogram baik</li>\r\n<li>Pesawat Saudi Arabia Airline</li>\r\n<li>Full menu catering (menu Indonesia/Asia)</li>\r\n<li>Hotel min. Bintang 4</li>\r\n<li>Executive Bus</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><strong>Bersahabat</strong></p>\r\n<p>Alumni Jemaah akan langsung tergabung dalam keluarga besar Assalaam untuk bersama-sama menjalankan kegiatan sosial dan keagamaan</p>\r\n<br />\r\n<p><strong>Extra</strong></p>\r\n<p>Pengenalan Bahasa Arab praktis &amp; extra program : ziarah ke Gua Hiro</p>\r\n</div>\r\n</body>\r\n</html>', '2018-10-22 03:30:09', '2018-10-22 03:30:09');
 
@@ -219,6 +226,15 @@ CREATE TABLE `galeris` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `galeris`
+--
+
+INSERT INTO `galeris` (`id`, `foto`, `kategorig_id`, `created_at`, `updated_at`) VALUES
+(2, 'ksN18G_IMG20160906075307.jpg', 2, '2018-10-23 00:15:37', '2018-10-23 00:15:37'),
+(4, 'pyPUKS_JABAL_UHUD_3.jpg', 1, '2018-10-24 01:38:05', '2018-10-24 01:38:05'),
+(7, 'dftKgC_IMG-20160828-WA0071.jpg', 4, '2018-10-24 01:41:25', '2018-10-24 01:41:25');
 
 -- --------------------------------------------------------
 
@@ -398,7 +414,7 @@ CREATE TABLE `jadwalhajis` (
 --
 
 INSERT INTO `jadwalhajis` (`id`, `bulan`, `keterangan`, `created_at`, `updated_at`) VALUES
-(6, 'NOVEMBER 2018', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><strong>Jadwal Praktek : -</strong></p>\r\n<p><strong>Jadwal Bimbingan : -</strong></p>\r\n<p><strong>Keberangkatan : -</strong></p>\r\n<p><strong>Kepulangan : -</strong></p>\r\n</body>\r\n</html>', '2018-10-22 02:54:51', '2018-10-22 02:54:51'),
+(6, 'NOVEMBER 2018', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><strong>Jadwal Praktek : -</strong></p>\r\n<p><strong>Jadwal Bimbingan : -</strong></p>\r\n<p><strong>Keberangkatan : -</strong></p>\r\n<p><strong>Kepulangan : -</strong></p>\r\n</body>\r\n</html>', '2018-10-22 02:54:51', '2018-10-23 23:25:22'),
 (7, 'DESEMBER 2018', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><strong>Jadwal Praktek : -</strong></p>\r\n<p><strong>Jadwal Bimbingan : -</strong></p>\r\n<p><strong>Keberangkatan : -</strong></p>\r\n<p><strong>Kepulangan : -</strong></p>\r\n</body>\r\n</html>', '2018-10-22 02:55:13', '2018-10-22 02:55:13');
 
 -- --------------------------------------------------------
@@ -434,7 +450,7 @@ CREATE TABLE `jadwalumrohs` (
 --
 
 INSERT INTO `jadwalumrohs` (`id`, `bulan`, `keterangan`, `created_at`, `updated_at`) VALUES
-(1, 'OKTOBER 2018', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><strong>Jadwal Praktek : -</strong></p>\r\n<p><strong>Jadwal Bimbingan : -</strong></p>\r\n<p><strong>Keberangkatan : -</strong></p>\r\n<p><strong>Kepulangan : -</strong></p>\r\n</body>\r\n</html>', '2018-10-21 22:39:35', '2018-10-21 22:39:35'),
+(1, 'OKTOBER 2018', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><strong>Jadwal Praktek : -</strong></p>\r\n<p><strong>Jadwal Bimbingan : -</strong></p>\r\n<p><strong>Keberangkatan : -</strong></p>\r\n<p><strong>Kepulangan : -</strong></p>\r\n</body>\r\n</html>', '2018-10-21 22:39:35', '2018-10-23 23:27:22'),
 (3, 'NOVEMBER 2018', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><strong>Jadwal Praktek : -</strong></p>\r\n<p><strong>Jadwal Bimbingan : -</strong></p>\r\n<p><strong>Keberangkatan : -</strong></p>\r\n<p><strong>Kepulangan : -</strong></p>\r\n</body>\r\n</html>', '2018-10-22 01:37:37', '2018-10-22 01:37:37');
 
 -- --------------------------------------------------------
@@ -494,6 +510,15 @@ CREATE TABLE `kategorigs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `kategorigs`
+--
+
+INSERT INTO `kategorigs` (`id`, `nama`, `created_at`, `updated_at`) VALUES
+(1, 'Galeri Wisata', '2018-10-23 00:14:45', '2018-10-23 00:14:45'),
+(2, 'Galeri Haji', '2018-10-23 00:14:57', '2018-10-23 00:14:57'),
+(4, 'Galeri Umroh', '2018-10-24 01:38:46', '2018-10-24 01:38:46');
 
 -- --------------------------------------------------------
 
@@ -783,7 +808,7 @@ CREATE TABLE `tabungans` (
 --
 
 INSERT INTO `tabungans` (`id`, `judul`, `keterangan`, `keunggulan`, `syarat`, `logo`, `note`, `created_at`, `updated_at`) VALUES
-(1, 'Tabungan Umroh', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><em>\"Bulatkan niat dan mulailah menabung, waktu dan kesempatan biarlah Allah yang menentukan. Semoga kita semua dimampukan oleh Allah untuk berkunjung kerumahNya di Baitullah. Kini kita dapat mempersiapkan umroh dengan lebih terencana. Assalaam memudahkan kita mewujudkannya melalui tabungan Umroh Assalaam.\"</em></p>\r\n</body>\r\n</html>', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><strong>keunggulannya Tabungan Umrah</strong></p>\r\n<p>Bekerjasama dengan Bank</p>\r\n<p>Buku tabungan dipegang oleh Jemaah, setoran dapat dilakukan secara tunai atau transfer bank</p>\r\n<p>Nilai setoran sesuai kemampuan</p>\r\n<p>Bebas biaya administrasi bulanan</p>\r\n<ul>\r\n<li>Aman</li>\r\n<li>Mudah</li>\r\n<li>Fleksibel</li>\r\n<li>Bebas</li>\r\n</ul>\r\n</body>\r\n</html>', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><strong>Persyaratan</strong></p>\r\n<ul>\r\n<li>Mengisi formulir tabungan Umroh</li>\r\n</ul>\r\n<ul>\r\n<li>Menyerahkan fotocopy SIM/KTP yang masih berlaku</li>\r\n<li>Setoran awal minimal Rp 500.000,-</li>\r\n</ul>\r\n</body>\r\n</html>', 'EoIFha_h.png.jpeg', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><em><strong>*Harga paket sudah termasuk biaya lokal<br />Total biaya Umrah ini hanya perkiraan. Sebelum tanggal keberangkatan, biaya akan dihitung lagi menyesuaikan harga paket umrah dan nilai tukar dolar yang berlaku pada tahun keberangkatan umrah yang dipilih jamaah.</strong></em></p>\r\n</body>\r\n</html>', '2018-10-22 03:25:03', '2018-10-22 03:25:03');
+(1, 'Tabungan Umrohh', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><em>\"Bulatkan niat dan mulailah menabung, waktu dan kesempatan biarlah Allah yang menentukan. Semoga kita semua dimampukan oleh Allah untuk berkunjung kerumahNya di Baitullah. Kini kita dapat mempersiapkan umroh dengan lebih terencana. Assalaam memudahkan kita mewujudkannya melalui tabungan Umroh Assalaam.\"</em></p>\r\n</body>\r\n</html>', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><strong>keunggulannya Tabungan Umrah</strong></p>\r\n<p>Bekerjasama dengan Bank</p>\r\n<p>Buku tabungan dipegang oleh Jemaah, setoran dapat dilakukan secara tunai atau transfer bank</p>\r\n<p>Nilai setoran sesuai kemampuan</p>\r\n<p>Bebas biaya administrasi bulanan</p>\r\n<ul>\r\n<li>Aman</li>\r\n<li>Mudah</li>\r\n<li>Fleksibel</li>\r\n<li>Bebas</li>\r\n</ul>\r\n</body>\r\n</html>', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><strong>Persyaratan</strong></p>\r\n<ul>\r\n<li>Mengisi formulir tabungan Umroh</li>\r\n</ul>\r\n<ul>\r\n<li>Menyerahkan fotocopy SIM/KTP yang masih berlaku</li>\r\n<li>Setoran awal minimal Rp 500.000,-</li>\r\n</ul>\r\n</body>\r\n</html>', '34fd50e767c531a60b2e8cd9655c821e.jpeg', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p><em><strong>*Harga paket sudah termasuk biaya lokal<br />Total biaya Umrah ini hanya perkiraan. Sebelum tanggal keberangkatan, biaya akan dihitung lagi menyesuaikan harga paket umrah dan nilai tukar dolar yang berlaku pada tahun keberangkatan umrah yang dipilih jamaah.</strong></em></p>\r\n</body>\r\n</html>', '2018-10-22 03:25:03', '2018-10-23 23:28:23');
 
 -- --------------------------------------------------------
 
@@ -805,7 +830,7 @@ CREATE TABLE `testimonis` (
 --
 
 INSERT INTO `testimonis` (`id`, `logo`, `keterangan`, `nama`, `created_at`, `updated_at`) VALUES
-(1, 'AW5kte_1.jpg', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>lhamdulillah, wasyukurillah Tabarakallah beruntung sekali kami bisa bergabung untuk menunaikan ibadah umrah dengan Naba Tours Assalaam. Bahwa dari sejak manasik sampai ke pelaksanaan ibadahnya di sana, kami selalu dibimbing dan diarahkan oleh para pembimbing secara gamblang, jelas dan hati-hati. Sehingga kami semua telah mendapatkan kenikmatan dan kekhusyuan dalam pelaksanaan ibadah umrahnya</p>\r\n</body>\r\n</html>', 'Rina Yulianita', '2018-10-22 03:04:53', '2018-10-22 03:04:53'),
+(1, '39caaa58c41955f10578736766a9a5af.jpg', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>lhamdulillah, wasyukurillah Tabarakallah beruntung sekali kami bisa bergabung untuk menunaikan ibadah umrah dengan Naba Tours Assalaam. Bahwa dari sejak manasik sampai ke pelaksanaan ibadahnya di sana, kami selalu dibimbing dan diarahkan oleh para pembimbing secara gamblang, jelas dan hati-hati. Sehingga kami semua telah mendapatkan kenikmatan dan kekhusyuan dalam pelaksanaan ibadah umrahnya.</p>\r\n</body>\r\n</html>', 'Rina Yulianitaa', '2018-10-22 03:04:53', '2018-10-23 23:22:08'),
 (2, 'IZoser_2.jpg', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Alhamdulillah, saya puas dengan pelayanan umrah Nur Assalaam. Semoga Allah mengabulkan doa saya bisa berumrah lagi/berhaji dengan Nur Assalaam. Jazakallohu khoiron katsiran.</p>\r\n</body>\r\n</html>', 'Melly', '2018-10-22 03:05:34', '2018-10-22 03:05:34'),
 (3, 'PGwZWP_3.jpg', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Umrahnya sangat berkesan sekali. Sampai-sampai Ibu ingin kembali ke sana. Insya Allah kalau ada rizki ibu mau ikut lagi. Apalagi pemandunya Ust. Romdon sangat baik sekali</p>\r\n</body>\r\n</html>', 'Dianny', '2018-10-22 03:06:04', '2018-10-22 03:06:04');
 
@@ -831,7 +856,7 @@ CREATE TABLE `umrohs` (
 
 INSERT INTO `umrohs` (`id`, `judul`, `isi`, `slug`, `kategorie_id`, `created_at`, `updated_at`) VALUES
 (1, 'Umrah Reguler', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<div class=\"container\">\r\n<p style=\"margin-left: 21.3pt;\">Umrah reguler adalah umroh dengan Program Perjalanan ke tiga kota yaitu Makkah, Madinah, dan Jeddah.</p>\r\n<p style=\"margin-left: 21.3pt;\">Lama perjalanan umroh reguler ini adalah 9 hari.</p>\r\n<p style=\"margin-left: 21.3pt;\">Jamaah akan mendapatkan fasilitas pelaksanaan ibadah umroh sebanyak 3 kali (optional) dengan bimbingan penuh dari pembimbing Umroh berpengalaman.</p>\r\n<p style=\"margin-left: 21.3pt;\">Selain melaksanakan ibadah umroh, Jamaah juga akan mendapatkan fasilitas city tour kota Mekah, Madinah dan Jedah, mengunjungi berbagai tempat bersejarah Islam.</p>\r\n<p style=\"margin-left: 21.3pt;\">Nabatour juga memberikan fasilitas plus berupa extra program yaitu ziarah ke Gua Hiro tempat Nabi Muhammad saw pertama kali menerima wahyu.</p>\r\n<p style=\"margin-left: 21.3pt;\">Umroh Reguler Nabatour menggunakan pesawat Saudi Arabia Airline, dengan direct flight ke Jeddah atau Madinah tanpa transit sehingga Jamaah lebih nyaman selama perjalanan.</p>\r\n<p style=\"margin-left: 21.3pt;\">Kami memiliki 3 jenis paket Umroh Reguler yang perbedaannya adalah pada tipe hotel yang digunakan dan jarak&nbsp; hotel ke masjidil haram.</p>\r\n</div>\r\n</body>\r\n</html>', 'umrah-reguler', 1, '2018-10-22 03:17:07', '2018-10-22 03:17:07'),
-(2, 'Umrah Plus', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Umrah Plus adalah umroh reguler yang dilanjutkan berziarah ke negara-negara lain sesuai keinginan jamaah, antara lain negara-negara seperti : Istanbul Turki, Mesir, Aqso, Yordania, Eropa Barat, Spanyol, Dubai dll</p>\r\n</body>\r\n</html>', 'umrah-plus', 2, '2018-10-22 03:17:39', '2018-10-22 03:17:39'),
+(2, 'Umrah Pluss', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Umrah Plus adalah umroh reguler yang dilanjutkan berziarah ke negara-negara lain sesuai keinginan jamaah, antara lain negara-negara seperti : Istanbul Turki, Mesir, Aqso, Yordania, Eropa Barat, Spanyol, Dubai dll.</p>\r\n</body>\r\n</html>', 'umrah-pluss', 2, '2018-10-22 03:17:39', '2018-10-23 23:26:29'),
 (3, 'Umrah By Request', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Ingin berangkat umroh bersama keluarga Anda?</p>\r\n<p>Pilih <strong>Paket Umroh By Request</strong> ini dan Anda dapat berangkat umroh dengan lebih privasi bersama keluarga Anda.</p>\r\n<p>Dengan paket ini Anda dapat menentukan jadwal keberangkatan, lama perjalanan, pilihan penerbangan, dan akomodasi yang diinginkan.</p>\r\n<p>Apakah keunggulannya ?</p>\r\n<ol>\r\n<li>Jadwal keberangkatan fleksible sesuai keinginan.</li>\r\nAnda dapat menentukan waktu perjalanan umroh anda sendiri, baik tanggal keberangkatan maupun lama perjalanan umroh dan tanggal kepulangan.\r\n<li>Pasti Berangkat. Tidak adanya minimum kuota di Paket Umroh By Request ini, membuat keberangkatan anda tidak menunggu terpenuhinya kuota jamaah Umroh. Bahkan 2 orang pun Umroh dapat terlaksana, Insya Allah.</li>\r\n<li>Akomodasi sesuai keinginan. Dengan memilih paket Umroh By Request ini, Hotel Makkah dan Madinah dapat anda sesuaikan</li>\r\n<li>Berangkat sendiri. Ingin berangkat tanpa Tour Leader, karena anda sudah terbiasa? Dengan memilih paket Umroh By Request ini, tanpa pendamping dapat langsung berangkat Umroh</li>\r\n<li>Direkomendasikan bagi Anda yang akan bersama keluarga atau Perusahaan</li>\r\n</ol>\r\n</body>\r\n</html>', 'umrah-by-request', 3, '2018-10-22 03:18:23', '2018-10-22 03:18:23');
 
 -- --------------------------------------------------------
@@ -855,7 +880,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'nabatour@gmail.com', '$2y$10$oKlK1gKy0xtLy/OOt/kNGe2oClSWur2yFieBphIe1hchnAXpASJjW', 'EH0uldXFHXBvr8cMZzNaYybhN0wsrhaGpKiKv6SoSa49LbyXOJsaNxAC4IFz', '2018-10-21 08:45:37', '2018-10-21 08:45:37');
+(1, 'admin', 'nabatour@gmail.com', '$2y$10$oKlK1gKy0xtLy/OOt/kNGe2oClSWur2yFieBphIe1hchnAXpASJjW', 'zlx2dmnkx8XQ1bmQbPwcePkpks08jl3v2uY1sLONDYjdb6AvRgyxhB7Jeesk', '2018-10-21 08:45:37', '2018-10-21 08:45:37');
 
 -- --------------------------------------------------------
 
@@ -878,7 +903,7 @@ CREATE TABLE `wisatas` (
 --
 
 INSERT INTO `wisatas` (`id`, `judul`, `isi`, `slug`, `kategoriw_id`, `created_at`, `updated_at`) VALUES
-(1, 'Wisata Muslim Domestik', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Nabatour melayani perjalanan wisata muslim baik domestik maupun internasional. Untuk anda yang ingin mengetahui perkembangan Islam di Indonesia, dapat memilih wisata muslim domestik yang akan mengantarkan Anda berziarah ke berbagai tempat bersejarah Islam di Indonesia</p>\r\n</body>\r\n</html>', 'wisata-muslim-domestik', 1, '2018-10-21 23:52:33', '2018-10-21 23:52:33'),
+(1, 'Wisata Muslim Domestikk', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Nabatour melayani perjalanan wisata muslim baik domestik maupun internasional. Untuk anda yang ingin mengetahui perkembangan Islam di Indonesia, dapat memilih wisata muslim domestik yang akan mengantarkan Anda berziarah ke berbagai tempat bersejarah Islam di Indonesiaa</p>\r\n</body>\r\n</html>', 'wisata-muslim-domestikk', 1, '2018-10-21 23:52:33', '2018-10-24 01:26:42'),
 (2, 'Wisata Muslim Internasional', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p>Bagi anda yang ingin perkembangan Islam di Mancanegara, dapat memilih paket wisata muslim Internasional dan memilih negara destinasi wisata sesuai keinginan anda, seperti Mesir, Turki, China, Malaysia dan negara-negara berpenduduk Muslim lainnya. Kami akan memfasilitasi anda dengan akomodasi yang nyaman, makanan halal dan tempat beribadah selama perjalanan</p>\r\n</body>\r\n</html>', 'wisata-muslim-internasional', 2, '2018-10-22 03:26:45', '2018-10-22 03:26:45');
 
 -- --------------------------------------------------------
@@ -1167,19 +1192,19 @@ ALTER TABLE `beritas`
 -- AUTO_INCREMENT for table `daftarhajis`
 --
 ALTER TABLE `daftarhajis`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `daftars`
 --
 ALTER TABLE `daftars`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `daftartabungans`
 --
 ALTER TABLE `daftartabungans`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `faqs`
@@ -1203,7 +1228,7 @@ ALTER TABLE `galerihomes`
 -- AUTO_INCREMENT for table `galeris`
 --
 ALTER TABLE `galeris`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `galeriwisatas`
@@ -1281,7 +1306,7 @@ ALTER TABLE `kategories`
 -- AUTO_INCREMENT for table `kategorigs`
 --
 ALTER TABLE `kategorigs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kategoris`
@@ -1305,7 +1330,7 @@ ALTER TABLE `kontaks`
 -- AUTO_INCREMENT for table `lokasis`
 --
 ALTER TABLE `lokasis`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -1329,7 +1354,7 @@ ALTER TABLE `profils`
 -- AUTO_INCREMENT for table `promos`
 --
 ALTER TABLE `promos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -1347,7 +1372,7 @@ ALTER TABLE `tabungans`
 -- AUTO_INCREMENT for table `testimonis`
 --
 ALTER TABLE `testimonis`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `umrohs`

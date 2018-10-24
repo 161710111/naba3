@@ -21,7 +21,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        return view('frontend.home',compact('home'));
+        return view('frontend.home',compact('homes'));
     }
 
     public function index1()

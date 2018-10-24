@@ -15,7 +15,9 @@
 			  	<form action="{{ route('galeri.update',$galeris->id) }}" method="post" enctype="multipart/form-data" >
 			  		<input name="_method" type="hidden" value="PATCH">
         			{{ csrf_field() }}
-
+        			@if (isset($galeris)&& $galeris->foto)
+        			<img src="{{ asset('assets/admin/images/icon/'.$galeris->foto )}}" style="max-height:100px; max-width: 150px; margin-top: 6px;">
+        			@endif
         			<div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">
 			  			<label class="control-label">foto</label>
 			  			<input type="file" name="foto" class="form-control" value="{{ $galeris->foto }}"  required>

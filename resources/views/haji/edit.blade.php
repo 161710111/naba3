@@ -1,5 +1,26 @@
 @extends('layouts.admin')
 @section('content')
+
+<script src="{{ asset('assets/tinymce/js/tinymce/tinymce.js') }}"></script>
+<script type="text/javascript">
+    tinymce.init({
+  selector: 'textarea',
+  height: 300,
+  theme: 'modern',
+  plugins: 'print preview fullpage  searchreplace autolink directionality  visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount   imagetools  contextmenu colorpicker textpattern help',
+  toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+  image_advtab: true,
+  templates: [
+    { title: 'Test template 1', content: 'Test 1' },
+    { title: 'Test template 2', content: 'Test 2' }
+  ],
+  content_css: [
+    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+    '//www.tinymce.com/css/codepen.min.css'
+  ]
+ });
+
+</script>
 <div class="row">
 	<div class="container">
 		<div class="col-md-12">
@@ -24,7 +45,7 @@
 
 			  		<div class="form-group {{ $errors->has('isi') ? ' has-error' : '' }}">
 			  			<label class="control-label">isi</label>	
-			  			<input type="text" value="{{ $hajis->isi }}" name="nama" class="form-control"  required>
+			  			<textarea  name="isi"  class="form-control" required>{{ $hajis->isi }}</textarea>
 			  			@if ($errors->has('isi'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('isi') }}</strong>
@@ -34,7 +55,7 @@
 
 			  		<div class="form-group {{ $errors->has('harga') ? ' has-error' : '' }}">
 			  			<label class="control-label">harga</label>	
-			  			<input type="text" value="{{ $hajis->harga }}" name="nama" class="form-control"  required>
+			  			<textarea  name="harga"  class="form-control" required>{{ $hajis->harga }}</textarea>
 			  			@if ($errors->has('harga'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('harga') }}</strong>
@@ -44,7 +65,7 @@
 
 			  		<div class="form-group {{ $errors->has('fasilitas') ? ' has-error' : '' }}">
 			  			<label class="control-label">fasilitas</label>	
-			  			<input type="text" value="{{ $hajis->fasilitas }}" name="nama" class="form-control"  required>
+			  			<textarea  name="fasilitas" class="form-control" required>{{ $hajis->fasilitas }}</textarea>
 			  			@if ($errors->has('fasilitas'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('fasilitas') }}</strong>
@@ -54,7 +75,7 @@
 
 			  		<div class="form-group {{ $errors->has('batal') ? ' has-error' : '' }}">
 			  			<label class="control-label">batal</label>	
-			  			<input type="text" value="{{ $hajis->batal }}" name="nama" class="form-control"  required>
+			  			<textarea  name="batal"  class="form-control" required>{{ $hajis->batal }}</textarea>
 			  			@if ($errors->has('batal'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('batal') }}</strong>
@@ -64,7 +85,7 @@
 
 			  		<div class="form-group {{ $errors->has('biayamasuk') ? ' has-error' : '' }}">
 			  			<label class="control-label">biayamasuk</label>	
-			  			<input type="text" value="{{ $hajis->biayamasuk }}" name="nama" class="form-control"  required>
+			  			<textarea  name="biayamasuk"  class="form-control" required>{{ $hajis->biayamasuk }}</textarea>
 			  			@if ($errors->has('biayamasuk'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('biayamasuk') }}</strong>
@@ -74,7 +95,7 @@
 
 			  		<div class="form-group {{ $errors->has('biayatidak') ? ' has-error' : '' }}">
 			  			<label class="control-label">biayatidak</label>	
-			  			<input type="text" value="{{ $hajis->biayatidak }}" name="nama" class="form-control"  required>
+			  			<textarea  name="biayatidak"  class="form-control" required>{{ $hajis->biayatidak }}</textarea>
 			  			@if ($errors->has('biayatidak'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('biayatidak') }}</strong>
@@ -84,7 +105,7 @@
 
 			  		<div class="form-group {{ $errors->has('syarat') ? ' has-error' : '' }}">
 			  			<label class="control-label">syarat</label>	
-			  			<input type="text" value="{{ $hajis->syarat }}" name="nama" class="form-control"  required>
+			  			<textarea  name="syarat"  class="form-control" required>{{ $hajis->syarat }}</textarea>
 			  			@if ($errors->has('syarat'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('syarat') }}</strong>
@@ -94,7 +115,7 @@
 
 			  		<div class="form-group {{ $errors->has('daftar') ? ' has-error' : '' }}">
 			  			<label class="control-label">daftar</label>	
-			  			<input type="text" value="{{ $hajis->daftar }}" name="nama" class="form-control"  required>
+			  			<textarea  name="daftar"  class="form-control" required> {{ $hajis->daftar }}</textarea>
 			  			@if ($errors->has('daftar'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('daftar') }}</strong>

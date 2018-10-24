@@ -65,8 +65,8 @@ class KategoriwController extends Controller
      */
     public function edit($id)
     {
-        $kategoriwsa = Kategoriw::findOrFail($id);
-        return view('kategoriw.edit',compact('kategoriwsa'));
+        $kategoriws = Kategoriw::findOrFail($id);
+        return view('kategoriw.edit',compact('kategoriws'));
     }
 
     /**

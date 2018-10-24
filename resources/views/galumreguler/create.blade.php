@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
-			  <div class="panel-heading">Tambah Galeri Manasik Haji 
+			  <div class="panel-heading">Tambah Galeri Umroh Reguler 
 			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>

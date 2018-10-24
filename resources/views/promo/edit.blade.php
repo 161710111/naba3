@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<br>
-<br>
-<br>
+
 <div class="row">
 	<div class="container">
 		<div class="col-md-12">
@@ -15,7 +13,9 @@
 			  	<form action="{{ route('promo.update',$promos->id) }}" method="post" enctype="multipart/form-data" >
 			  		<input name="_method" type="hidden" value="PATCH">
         			{{ csrf_field() }}
-
+        			@if (isset($promos)&& $promos->foto)
+        			<img src="{{ asset('assets/admin/images/icon/'.$promos->foto )}}" style="max-height:100px; max-width: 150px; margin-top: 6px;">
+        			@endif
         			<div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">
 			  			<label class="control-label">Foto</label>
 			  			<input type="file" name="foto" class="form-control" value="{{ $promos->foto }}"  required>

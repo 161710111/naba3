@@ -1,9 +1,6 @@
 @extends('layouts.admin')
 @section('content')
 
-<br>
-<br>
-<br>
 <script src="{{ asset('assets/tinymce/js/tinymce/tinymce.js') }}"></script>
 <script type="text/javascript">
     tinymce.init({
@@ -39,7 +36,7 @@
         			{{ csrf_field() }}
 			  		<div class="form-group {{ $errors->has('judul') ? ' has-error' : '' }}">
 			  			<label class="control-label">Judul</label>	
-			  			<input type="text" value="{{ $umrohs->judul }}" name="nama" class="form-control"  required>
+			  			<input type="text" value="{{ $umrohs->judul }}" name="judul" class="form-control"  required>
 			  			@if ($errors->has('judul'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('judul') }}</strong>
@@ -49,7 +46,7 @@
 
 			  		<div class="form-group {{ $errors->has('isi') ? ' has-error' : '' }}">
 			  			<label class="control-label">isi</label>	
-			  			<textarea  name="isi" value="{{ $umrohs->isi }}" class="form-control" required></textarea>
+			  			<textarea  name="isi"  class="form-control" required>{{ $umrohs->isi }}</textarea>
 			  			@if ($errors->has('isi'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('isi') }}</strong>

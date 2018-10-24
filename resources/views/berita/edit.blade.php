@@ -36,7 +36,9 @@
 			  	<form action="{{ route('berita.update',$beritas->id) }}" method="post" enctype="multipart/form-data" >
 			  		<input name="_method" type="hidden" value="PATCH">
         			{{ csrf_field() }}
-
+        			@if (isset($beritas)&& $beritas->foto)
+        			<img src="{{ asset('assets/admin/images/icon/'.$beritas->foto )}}" style="max-height:100px; max-width: 150px; margin-top: 6px;">
+        			@endif
         			<div class="form-group {{ $errors->has('foto') ? ' has-error' : '' }}">
 			  			<label class="control-label">foto</label>
 			  			<input type="file" name="foto" class="form-control" value="{{ $beritas->foto }}"  required>
@@ -59,7 +61,7 @@
 
 			  		<div class="form-group {{ $errors->has('isi') ? ' has-error' : '' }}">
 			  			<label class="control-label">isi</label>	
-						<textarea  name="isi" value="{{ $beritas->isi }}" class="form-control" required></textarea>
+						<textarea  name="isi"  class="form-control" required>{{ $beritas->isi }}</textarea>
 						@if ($errors->has('isi'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('isi') }}</strong>

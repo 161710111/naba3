@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<br>
-<br>
-<br>
+
 <div class="row">
 	<div class="container">
 		<div class="col-md-12">
@@ -13,11 +11,34 @@
 				</div>
 			</div>
 
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
 			<br>
               <br>
 
 	<div class="table-responsive" style="color:black">
-		<table class="table">
+		<table class="table" id="myTable">
 			<thead>
 				<tr>
 					<th>No</th>

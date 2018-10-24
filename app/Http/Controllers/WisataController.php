@@ -76,7 +76,7 @@ class WisataController extends Controller
         $wisatas = Wisata::findOrFail($id);
         $kategoriws = Kategoriw::all();
         $ketegoriwsselect = Wisata::findOrFail($id)->kategories_id;
-        return view('Wisata.edit',compact('wisatas','kategoriws','kategoriwsselect'));
+        return view('wisata.edit',compact('wisatas','kategoriws','kategoriwsselect'));
     }
 
     /**
@@ -89,9 +89,9 @@ class WisataController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'judul' => 'required|',
-            'isi' => 'required|',
-            'kategorie_id' => 'required'
+            'judul' => 'required',
+            'isi' => 'required',
+            'kategoriw_id' => 'required',
         ]);
         $wisatas = Wisata::findOrFail($id);
         $wisatas->judul = $request->judul;

